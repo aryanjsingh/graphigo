@@ -7,6 +7,8 @@ import { StickyFooter } from "@/components/sticky-footer";
 import { TextLoop } from "@/components/core/text-loop";
 import { PointerHighlight } from "@/components/ui/pointer-highlight";
 import { SimpleCollection } from "@/components/ui/container-scroll-animation";
+import { ArchCarousel } from "@/components/ui/arch-carousel";
+import { ThreePillars } from "@/components/three-pillars";
 
 export default function Home() {
   return (
@@ -113,16 +115,69 @@ export default function Home() {
         <SimpleCollection />
       </section>
 
-      <section id="pricing" className="min-h-screen w-full py-20 bg-neutral-950">
-        <div className="container mx-auto px-4">
+      {/* Three Pillars Section */}
+      <ThreePillars />
+
+      <section id="pricing" className="w-full py-20 bg-neutral-950">
+        <div className="container mx-auto px-4 mb-16">
           <h2 className="text-5xl md:text-6xl lg:text-7xl font-bold text-center text-white mb-6 tracking-tight">
             Creators that we have
           </h2>
           <h2 className="text-5xl md:text-6xl lg:text-7xl font-bold text-center bg-gradient-to-r from-primary via-orange-400 to-primary bg-clip-text text-transparent mb-10 tracking-tight">
             worked with
           </h2>
-          <p className="text-center text-neutral-400 text-lg max-w-2xl mx-auto">Content for creators section goes here...</p>
         </div>
+        <ArchCarousel
+          items={[
+            {
+              type: "image",
+              src: "/portrait-1.png",
+              name: "Sarah Johnson",
+              description: "Tech Content Creator"
+            },
+            {
+              type: "image",
+              src: "/portrait-2.png",
+              name: "Michael Chen",
+              description: "Business Podcaster"
+            },
+            {
+              type: "image",
+              src: "/portrait-3.png",
+              name: "Emma Williams",
+              description: "Lifestyle Influencer"
+            },
+            {
+              type: "image",
+              src: "/portrait-4.png",
+              name: "David Martinez",
+              description: "Entrepreneur & Speaker"
+            },
+            {
+              type: "image",
+              src: "/portrait-5.png",
+              name: "Lisa Anderson",
+              description: "Marketing Strategist"
+            },
+            {
+              type: "image",
+              src: "/portrait-6.png",
+              name: "James Taylor",
+              description: "Creative Director"
+            },
+            {
+              type: "image",
+              src: "/portrait-7.png",
+              name: "Sophia Brown",
+              description: "Brand Consultant"
+            },
+          ]}
+          autoRotate={true}
+          autoRotateSpeed={0.5}
+          cardWidth={350}
+          cardHeight={480}
+          archHeight={120}
+        />
       </section>
 
       <section id="testimonials" className="min-h-screen w-full py-20 bg-neutral-950 border-t border-neutral-800">

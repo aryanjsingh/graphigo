@@ -33,7 +33,7 @@ export function StickyFooter() {
             {isAtBottom && (
                 <motion.div
                     className="fixed z-50 bottom-0 left-0 w-full h-80 flex justify-center items-center"
-                    style={{ backgroundColor: "#06ebd0" }}
+                    style={{ backgroundColor: "#ff6b35" }}
                     initial={{ y: "100%" }}
                     animate={{ y: 0 }}
                     exit={{ y: "100%" }}
