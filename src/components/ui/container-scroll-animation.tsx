@@ -3,13 +3,15 @@
 import { useEffect, useRef } from "react"
 
 const images = [
-    "/portrait-1.png",
-    "/portrait-2.png",
-    "/portrait-3.png",
-    "/portrait-4.png",
-    "/portrait-5.png",
-    "/portrait-6.png",
-    "/portrait-7.png",
+    "/dd.mp4",
+    "/TPT - 1.mp4",
+    "/cc.mp4",
+    "/aa.mp4",
+    "https://framerusercontent.com/assets/mt5slzhfn7IPnGoxRLKawB4g0wo.mp4",
+    "/bb.mp4",
+    "/Neel TPT-1.mp4",
+    "https://framerusercontent.com/assets/0ZMax4I0LMFal8udH9s6yWwlE.mp4",
+    "/ee.mp4",
 ]
 
 export function SimpleCollection() {
@@ -48,10 +50,6 @@ export function SimpleCollection() {
           animation: scroll-right 40s linear infinite;
         }
 
-        .animate-scroll-left:hover,
-        .animate-scroll-right:hover {
-          animation-play-state: paused;
-        }
       `}</style>
 
             {/* First 3D Perspective Container */}
@@ -62,6 +60,11 @@ export function SimpleCollection() {
                     perspectiveOrigin: "center center",
                 }}
             >
+                {/* Glowing gradient background */}
+                <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[120%] h-[120%] pointer-events-none">
+                    <div className="w-full h-full bg-[radial-gradient(circle_at_center,_var(--tw-gradient-stops))] from-cyan-500/40 via-cyan-500/10 to-transparent blur-[60px]" />
+                </div>
+
                 {/* Fade overlays */}
                 <div className="absolute left-0 top-0 bottom-0 w-48 z-10 pointer-events-none bg-gradient-to-r from-neutral-950 to-transparent" />
                 <div className="absolute right-0 top-0 bottom-0 w-48 z-10 pointer-events-none bg-gradient-to-l from-neutral-950 to-transparent" />
@@ -82,22 +85,33 @@ export function SimpleCollection() {
                         }}
                     >
                         <div className="flex gap-4 animate-scroll-left">
-                            {/* Triple the images for seamless loop */}
-                            {[...images, ...images, ...images].map((src, index) => (
+                            {/* Multiply images for seamless infinite loop */}
+                            {Array(10).fill(images).flat().map((src, index) => (
                                 <div
                                     key={index}
-                                    className="flex-shrink-0 overflow-hidden shadow-2xl transition-transform duration-300 hover:scale-105"
+                                    className="flex-shrink-0 overflow-hidden shadow-2xl"
                                     style={{
                                         width: "280px",
                                         height: "420px",
                                         transform: `translateZ(${Math.sin(index * 0.5) * 20}px)`,
                                     }}
                                 >
-                                    <img
-                                        src={src || "/placeholder.svg"}
-                                        alt={`Portrait ${(index % images.length) + 1}`}
-                                        className="w-full h-full object-cover"
-                                    />
+                                    {src.endsWith('.mp4') ? (
+                                        <video
+                                            src={src}
+                                            className="w-full h-full object-cover"
+                                            autoPlay
+                                            loop
+                                            muted
+                                            playsInline
+                                        />
+                                    ) : (
+                                        <img
+                                            src={src || "/placeholder.svg"}
+                                            alt={`Portrait ${(index % images.length) + 1}`}
+                                            className="w-full h-full object-cover"
+                                        />
+                                    )}
                                 </div>
                             ))}
                         </div>

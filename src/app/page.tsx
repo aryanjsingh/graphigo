@@ -3,12 +3,14 @@ import React from "react";
 import { BackgroundBeams } from "@/components/ui/background-beams";
 import { motion } from "framer-motion";
 import { Sparkles, Globe, ArrowRight } from "lucide-react";
-import { StickyFooter } from "@/components/sticky-footer";
+import { Footer } from "@/components/footer";
 import { TextLoop } from "@/components/core/text-loop";
 import { PointerHighlight } from "@/components/ui/pointer-highlight";
 import { SimpleCollection } from "@/components/ui/container-scroll-animation";
 import { ArchCarousel } from "@/components/ui/arch-carousel";
 import { ThreePillars } from "@/components/three-pillars";
+import { GraphigoFeatures } from "@/components/graphigo-features";
+import { LogoStrip } from "@/components/logo-strip";
 
 export default function Home() {
   return (
@@ -107,8 +109,13 @@ export default function Home() {
           </div>
         </div>
 
+        <div className="absolute bottom-4 left-0 right-0 z-20">
+          <LogoStrip />
+        </div>
         <BackgroundBeams />
       </div>
+
+
 
       {/* Simple Collection Section */}
       <section className="w-full bg-neutral-950">
@@ -118,90 +125,10 @@ export default function Home() {
       {/* Three Pillars Section */}
       <ThreePillars />
 
-      <section id="pricing" className="w-full py-20 bg-neutral-950">
-        <div className="container mx-auto px-4 mb-16">
-          <h2 className="text-5xl md:text-6xl lg:text-7xl font-bold text-center text-white mb-6 tracking-tight">
-            Creators that we have
-          </h2>
-          <h2 className="text-5xl md:text-6xl lg:text-7xl font-bold text-center bg-gradient-to-r from-primary via-orange-400 to-primary bg-clip-text text-transparent mb-10 tracking-tight">
-            worked with
-          </h2>
-        </div>
-        <ArchCarousel
-          items={[
-            {
-              type: "image",
-              src: "/portrait-1.png",
-              name: "Sarah Johnson",
-              description: "Tech Content Creator"
-            },
-            {
-              type: "image",
-              src: "/portrait-2.png",
-              name: "Michael Chen",
-              description: "Business Podcaster"
-            },
-            {
-              type: "image",
-              src: "/portrait-3.png",
-              name: "Emma Williams",
-              description: "Lifestyle Influencer"
-            },
-            {
-              type: "image",
-              src: "/portrait-4.png",
-              name: "David Martinez",
-              description: "Entrepreneur & Speaker"
-            },
-            {
-              type: "image",
-              src: "/portrait-5.png",
-              name: "Lisa Anderson",
-              description: "Marketing Strategist"
-            },
-            {
-              type: "image",
-              src: "/portrait-6.png",
-              name: "James Taylor",
-              description: "Creative Director"
-            },
-            {
-              type: "image",
-              src: "/portrait-7.png",
-              name: "Sophia Brown",
-              description: "Brand Consultant"
-            },
-          ]}
-          autoRotate={true}
-          autoRotateSpeed={0.5}
-          cardWidth={350}
-          cardHeight={480}
-          archHeight={120}
-        />
-      </section>
+      {/* Features Section */}
+      <GraphigoFeatures />
 
-      <section id="testimonials" className="min-h-screen w-full py-20 bg-neutral-950 border-t border-neutral-800">
-        <div className="container mx-auto px-4">
-          <h2 className="text-3xl font-bold text-center text-white mb-10">Testimonials</h2>
-          <p className="text-center text-neutral-400">Content for Testimonials section goes here...</p>
-        </div>
-      </section>
-
-      <section id="faq" className="min-h-screen w-full py-20 bg-neutral-950 border-t border-neutral-800">
-        <div className="container mx-auto px-4">
-          <h2 className="text-3xl font-bold text-center text-white mb-10">FAQ</h2>
-          <p className="text-center text-neutral-400">Content for FAQ section goes here...</p>
-        </div>
-      </section>
-
-      <section id="contact" className="min-h-screen w-full py-20 bg-neutral-950 border-t border-neutral-800">
-        <div className="container mx-auto px-4">
-          <h2 className="text-3xl font-bold text-center text-white mb-10">Contact Us</h2>
-          <p className="text-center text-neutral-400">Get in touch with us...</p>
-        </div>
-      </section>
-
-      <StickyFooter />
+      <Footer />
     </>
   );
 }
