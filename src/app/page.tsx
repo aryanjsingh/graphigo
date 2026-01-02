@@ -1,16 +1,23 @@
 "use client";
 import React from "react";
+import dynamic from "next/dynamic";
 import { BackgroundBeams } from "@/components/ui/background-beams";
 import { motion } from "framer-motion";
 import { Sparkles, Globe, ArrowRight } from "lucide-react";
-import { Footer } from "@/components/footer";
 import { TextLoop } from "@/components/core/text-loop";
 import { PointerHighlight } from "@/components/ui/pointer-highlight";
-import { SimpleCollection } from "@/components/ui/container-scroll-animation";
-import { ArchCarousel } from "@/components/ui/arch-carousel";
-import { ThreePillars } from "@/components/three-pillars";
-import { GraphigoFeatures } from "@/components/graphigo-features";
 import { LogoStrip } from "@/components/logo-strip";
+
+const Footer = dynamic(() => import("@/components/footer").then((mod) => mod.Footer));
+const SimpleCollection = dynamic(() =>
+  import("@/components/ui/container-scroll-animation").then((mod) => mod.SimpleCollection)
+);
+const ThreePillars = dynamic(() =>
+  import("@/components/three-pillars").then((mod) => mod.ThreePillars)
+);
+const GraphigoFeatures = dynamic(() =>
+  import("@/components/graphigo-features").then((mod) => mod.GraphigoFeatures)
+);
 
 export default function Home() {
   return (
