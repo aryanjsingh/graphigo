@@ -18,6 +18,9 @@ const ThreePillars = dynamic(() =>
 const GraphigoFeatures = dynamic(() =>
   import("@/components/graphigo-features").then((mod) => mod.GraphigoFeatures)
 );
+const SimpleCollectionLandscape = dynamic(() =>
+  import("@/components/ui/container-scroll-animation-landscape").then((mod) => mod.SimpleCollectionLandscape)
+);
 
 export default function Home() {
   return (
@@ -124,13 +127,18 @@ export default function Home() {
 
 
 
+      {/* Three Pillars Section */}
+      <ThreePillars />
+
       {/* Simple Collection Section */}
       <section className="w-full bg-neutral-950">
         <SimpleCollection />
       </section>
 
-      {/* Three Pillars Section */}
-      <ThreePillars />
+      {/* Simple Collection Landscape Section */}
+      <section className="w-full bg-neutral-950">
+        <SimpleCollectionLandscape />
+      </section>
 
       {/* Features Section */}
       <GraphigoFeatures />

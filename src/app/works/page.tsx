@@ -1,14 +1,22 @@
+import { HeroSection } from "@/components/hero-section"
+import { ClientsMarquee } from "@/components/clients-marquee"
+import { FeaturedProjects } from "@/components/featured-projects"
+import { WorkShowcase } from "@/components/work-showcase"
+import { VideoReel } from "@/components/video-reel"
+import { StatsSection } from "@/components/stats-section"
+import { ContactCTA } from "@/components/contact-cta"
+
 export default function WorksPage() {
     return (
-        <section className="min-h-screen py-32 bg-background">
-            <div className="container mx-auto px-4">
-                <h1 className="text-4xl md:text-6xl font-bold text-center mb-8">
-                    Our Works
-                </h1>
-                <p className="text-xl text-center text-muted-foreground max-w-2xl mx-auto">
-                    Discover our portfolio of content creation and conversion projects. Coming soon...
-                </p>
-            </div>
-        </section>
+        <main className="min-h-screen bg-background overflow-x-hidden">
+            <HeroSection />
+            <ClientsMarquee />
+            <FeaturedProjects />
+            <VideoReel />
+            <WorkShowcase />
+            <StatsSection />
+            <ContactCTA />
+        </main>
     );
 }
+
