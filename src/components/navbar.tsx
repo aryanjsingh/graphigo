@@ -73,7 +73,7 @@ export function Navbar() {
                     )}
                     href="/"
                 >
-                    <span className=" text-xl tracking-tight font-bold italic text-foreground">Graphigo</span>
+                    <span className=" text-xl tracking-tight font-bold text-foreground">Graphigo</span>
                 </Link>
 
                 <div className="absolute inset-0 hidden flex-1 flex-row items-center justify-center space-x-2 text-sm font-medium text-muted-foreground transition duration-200 hover:text-foreground md:flex md:space-x-2">
