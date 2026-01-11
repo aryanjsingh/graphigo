@@ -4,15 +4,15 @@ import { useEffect, useRef } from "react"
 import { LazyVideo } from "./lazy-video"
 
 const images = [
-    "/dd.mp4",
-    "/bb.mp4",
-    "/gg.mp4",
-    "/aa.mp4",
-    "https://framerusercontent.com/assets/mt5slzhfn7IPnGoxRLKawB4g0wo.mp4",
-    "/cc.mp4",
-    "/ee.mp4",
+    "https://jpvdsqwonlhrhjgcmyuf.supabase.co/storage/v1/object/public/video/dd.mp4",
+    "https://jpvdsqwonlhrhjgcmyuf.supabase.co/storage/v1/object/public/video/bb.mp4",
+    "https://jpvdsqwonlhrhjgcmyuf.supabase.co/storage/v1/object/public/video/gg.mp4",
+    "https://jpvdsqwonlhrhjgcmyuf.supabase.co/storage/v1/object/public/video/aa.mp4",
     "https://framerusercontent.com/assets/0ZMax4I0LMFal8udH9s6yWwlE.mp4",
-    "/ff.mp4",
+    "https://jpvdsqwonlhrhjgcmyuf.supabase.co/storage/v1/object/public/video/cc.mp4",
+    "https://jpvdsqwonlhrhjgcmyuf.supabase.co/storage/v1/object/public/video/ee.mp4",
+    "https://framerusercontent.com/assets/mt5slzhfn7IPnGoxRLKawB4g0wo.mp4",
+    "https://jpvdsqwonlhrhjgcmyuf.supabase.co/storage/v1/object/public/video/ff.mp4",
 ]
 
 export function SimpleCollection() {
@@ -86,8 +86,8 @@ export function SimpleCollection() {
                         }}
                     >
                         <div className="flex gap-4 animate-scroll-left">
-                            {/* Multiply images for seamless infinite loop - Reduced duplication for performance */}
-                            {Array(4).fill(images).flat().map((src, index) => (
+                            {/* Multiply images for seamless infinite loop - Optimized to 2x for performance */}
+                            {Array(2).fill(images).flat().map((src, index) => (
                                 <div
                                     key={index}
                                     className="flex-shrink-0 overflow-hidden shadow-2xl"
@@ -101,6 +101,7 @@ export function SimpleCollection() {
                                         <LazyVideo
                                             src={src}
                                             className="w-full h-full object-cover"
+                                            poster={`/posters/${src.split('/').pop()?.replace('.mp4', '.jpg')}`}
                                         />
                                     ) : (
                                         <img
