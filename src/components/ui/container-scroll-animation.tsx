@@ -4,14 +4,14 @@ import { useEffect, useRef } from "react"
 
 const images = [
     "/dd.mp4",
-    "/TPT - 1.mp4",
-    "/cc.mp4",
+    "/bb.mp4",
+    "/gg.mp4",
     "/aa.mp4",
     "https://framerusercontent.com/assets/mt5slzhfn7IPnGoxRLKawB4g0wo.mp4",
-    "/bb.mp4",
-    "/Neel TPT-1.mp4",
-    "https://framerusercontent.com/assets/0ZMax4I0LMFal8udH9s6yWwlE.mp4",
+    "/cc.mp4",
     "/ee.mp4",
+    "https://framerusercontent.com/assets/0ZMax4I0LMFal8udH9s6yWwlE.mp4",
+    "/ff.mp4",
 ]
 
 export function SimpleCollection() {

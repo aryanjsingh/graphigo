@@ -49,6 +49,8 @@ export const ParallaxScroll = ({
                                     className="object-cover object-center"
                                     alt="thumbnail"
                                     fill
+                                    sizes="(max-width: 768px) 100vw, 33vw"
+                                    loading="lazy"
                                 />
                             </div>
                         </motion.div>
@@ -63,6 +65,8 @@ export const ParallaxScroll = ({
                                     className="object-cover object-center"
                                     alt="thumbnail"
                                     fill
+                                    sizes="(max-width: 768px) 100vw, 33vw"
+                                    loading="lazy"
                                 />
                             </div>
                         </motion.div>
@@ -77,6 +81,8 @@ export const ParallaxScroll = ({
                                     className="object-cover object-center"
                                     alt="thumbnail"
                                     fill
+                                    sizes="(max-width: 768px) 100vw, 33vw"
+                                    loading="lazy"
                                 />
                             </div>
                         </motion.div>
