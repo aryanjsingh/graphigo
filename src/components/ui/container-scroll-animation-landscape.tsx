@@ -1,6 +1,7 @@
 "use client"
 
 import { useEffect, useRef } from "react"
+import { LazyVideo } from "./lazy-video"
 
 const images = [
     "/dd.mp4",
@@ -85,8 +86,8 @@ export function SimpleCollectionLandscape() {
                         }}
                     >
                         <div className="flex gap-4 animate-scroll-left">
-                            {/* Multiply images for seamless infinite loop */}
-                            {Array(10).fill(images).flat().map((src, index) => (
+                            {/* Multiply images for seamless infinite loop - Reduced duplication for performance */}
+                            {Array(4).fill(images).flat().map((src, index) => (
                                 <div
                                     key={index}
                                     className="flex-shrink-0 overflow-hidden shadow-2xl"
@@ -97,19 +98,16 @@ export function SimpleCollectionLandscape() {
                                     }}
                                 >
                                     {src.endsWith('.mp4') ? (
-                                        <video
+                                        <LazyVideo
                                             src={src}
                                             className="w-full h-full object-cover"
-                                            autoPlay
-                                            loop
-                                            muted
-                                            playsInline
                                         />
                                     ) : (
                                         <img
                                             src={src || "/placeholder.svg"}
                                             alt={`Landscape ${(index % images.length) + 1}`}
                                             className="w-full h-full object-cover"
+                                            loading="lazy"
                                         />
                                     )}
                                 </div>
