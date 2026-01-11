@@ -41,6 +41,4 @@ yarn-error.log*
 next-env.d.ts
 
 # Large video files
-public/cc.mp4
-public/ee.mp4
 .next.zip
