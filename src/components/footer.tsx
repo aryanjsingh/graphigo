@@ -9,12 +9,10 @@ export function Footer() {
                 style={{
                     background: `linear-gradient(to bottom, 
             transparent 0%, 
-            transparent 10%,
-            rgba(0, 222, 222, 0.05) 25%,
-            rgba(0, 222, 222, 0.15) 50%,
-            rgba(0, 222, 222, 0.3) 75%,
-            rgba(0, 222, 222, 0.5) 90%,
-            rgba(0, 222, 222, 0.6) 100%
+            transparent 40%,
+            rgba(0, 222, 222, 0.05) 60%,
+            rgba(0, 222, 222, 0.15) 80%,
+            rgba(0, 222, 222, 0.3) 100%
           )`,
                 }}
             />

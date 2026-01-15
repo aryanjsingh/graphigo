@@ -1,122 +1,408 @@
 "use client";
-
-import { HeroParallax } from "@/components/ui/hero-parallax";
-import { ParallaxScroll } from "@/components/ui/parallax-scroll";
-import { Footer } from "@/components/footer";
+import React from "react";
+import Image from "next/image";
+import { Timeline } from "@/components/ui/timeline";
+import { BackgroundBeams } from "@/components/ui/background-beams";
 
 export default function WorksPage() {
     return (
-        <main className="min-h-screen bg-neutral-950">
-            <HeroParallax products={products} />
-            <div className="pb-20 pt-0 bg-neutral-950 relative w-full">
-                <ParallaxScroll images={shortProducts} />
+        <div className="w-full h-full bg-neutral-950 relative antialiased">
+            <BackgroundBeams />
+
+            {/* Header Removed as per request, added space for navbar */}
+            <div className="pt-40"></div>
+
+            {/* Timeline Component */}
+            <div className="relative z-10">
+                <Timeline data={timelineData} />
             </div>
-            <Footer />
-        </main>
+        </div>
     );
 }
 
-const shortProducts = [
-    "https://lh3.googleusercontent.com/aida-public/AB6AXuDDzwsI6Odb_4_uUzP6gyVTLfaaGBsAc05HVu3-AK4eRkmn9uJp7Y-NliWHgbSnL2qwbrTOJ6lphgGQhHU6qs6vEZ8POMW7bKdLpFff2qLN2Id6O_RlGMVYoRZ0QnwK6M7U7PJbSmeDuBfkeAoTBHYePKOPzxWTdpLM7YuYfvjGfLLDLON8m-ONQRehQpYnsVtEpNqczcByd_BeqjJuTji7Gbbqyu_ZzOioeIpb-4qniQBykbbSSKmPuF09nP4a7lRx8bBiHLiiH6s",
-    "https://lh3.googleusercontent.com/aida-public/AB6AXuCfS4oRiIAzBL5RQFDYO2NmbKVzveWvaN4bugUeeGoaxirBGjO_I4rI06UnbmuMxP1xEeSiX-f9Wl6J1-I06ab01u-wVz6NhTwWVK38j9vmZarSKP4K5l-aEx-Z3JmHHxIz--sQDh12_g-3bChUTKPUclq4ufvoap95hkRCeckzVw8EoyunTP3_ZdkCL9cimlXF9wpQIygsR3qvLwZRAUkD9tY6QVv-gcIzynqsK67-myIhnvFw41WPyq2e9LQQEOc0iy2JS35d2Ww",
-    "https://lh3.googleusercontent.com/aida-public/AB6AXuC4KJV2eX3u-n-lUKB8cmRcHBpYHhrtTsPxg6b1QGNHIYxvy1TIE4e8NfYjEPTy4pxr998tAaorOEdzL5vcZtSO-qvdG1Dr-QIIRH3q155b9uaolidQK5abwklClspa0w2E6FJb4eJPBluXX4IKpZzrNVbBatLk0s3pYI32ZZ99SQ3Q1gPQgs_yPoNF3N0bnWvE6x8Li11xVtJNN8nXaWi3EVdIQe5y_6nEVcFea33X5xexAEKbQ9yI72CsuNN6EWP169rk7WwWb8E",
-    "https://lh3.googleusercontent.com/aida-public/AB6AXuD_bXOo30hUUBpBSBnRjChaqh3vQH5GljqaAk_hQSPAagkqdgMUbHYiHTAOt-vdrpnzPKfWvP9kaByvN8vVcczjnc-sbZCLndAk5L5F3v_Zl3MHkbMH1Z38u1DuQcLIcRaeiqn2zOsEs12mrxyoxbFmjf_pFDLZM0HR4_ZH3yHHlDLGcpZzBtDnx-0w-a2aMMswmF6v2ewJSxkrUqcjbxehfZqr5FqyXJfnS3JOWgdIfziF3YmlYGgFCDFCEcz8M8tPBwVipUnCC5Y",
-    "https://lh3.googleusercontent.com/aida-public/AB6AXuASsYK9bLjVIdX-MLBcNK-5sBDQVokShgDJ3ZtPyeaKhkGn04zOBHiDyGnGEZlfPtIRaZMJBtCl9CzXJZMBlfUPI-wc3kcmVkiBC1QAX41fduRmNAJjf7_hTuj9omS6NPnRNKbTLjxpIou1nt1lQLbvgbhV9So0FD48D9ARGEkRWGApjTXerbBN_Tcy_D9Mf9n1qx24jcb47tCO_jqe1eiaVMaFHHyCE8jYtbBcQWvdKGHG5xaTmy-AAH54e4A_8fabrS12-dNAqrM",
-    "https://lh3.googleusercontent.com/aida-public/AB6AXuCfzGJ7e7IN08qEVhHCZjlClQWXWIlyGAOB7G0G66834vQfNLhFMikPq4zxJ6S98DmRv1L0tUAKu4yz4u9n6K9dqwa_COZRGdUDYAHmORmxNfyHkiEr_9tEteK3Kjf_iHD7fuVCKceF2nzaKMD4a6pEsyW2HCSFijcYwFK-jMRemyiRCX7QibVrD3cGIktxGoUtwslLI-DbKj5BkjT5-jbz82Zzgpk1Jn75n2pkweCUDq3kj4mQRdyQd284Z8JGwqngBkLfynZpA8s",
-    "https://lh3.googleusercontent.com/aida-public/AB6AXuCsrdnuy5uYPsSNUMcVXIn_FS_avINKM7GV2zGsqo1_f5oC21rk0Evo1UlXI6MzQgR1g6U8SL0ERWPeSG4DIeSLzZrwVapnXt1-ojVYgsCOy8eMWt6jkCwSfM7cTV_s2hNdv-Tv6SJY2pvdicWcDj5LaBwGNOCSuO-7_8E2LOVuZ7h22aRMxEsvnuixn2WwmoxE2Ey1jqnsFfqKgL24Yp_BNQriu_3vwT3e83A57XbguTbN_pa4DpOnCAzXW04seET9lba0oVFyGsA",
-    "https://lh3.googleusercontent.com/aida-public/AB6AXuDu-l-nAUzJicaXM0CrdTbfodUDGk8RbOaKbLFs4uy_pc_AsuB5BixmDWbaudA55GuvLVmLqIShI9lYENEG4j-UQmpT8naA1OrF9AISCeZxIBfxplxYwm7xaUeVnK9e2t-7BvX3hwmTj9KTrLYuf7wNAUKO74fzyJsydCqEa2UuyG6U73KpMXOjBpzVN8Xr7-sYX27L-RkU-ni-3xSZphk1VU9-D0Heity1F0RvMBzM-E_fQNgEVXcZTJtlBuSueCeFKAsuMe2cC9c",
-    "https://lh3.googleusercontent.com/aida-public/AB6AXuCfS4oRiIAzBL5RQFDYO2NmbKVzveWvaN4bugUeeGoaxirBGjO_I4rI06UnbmuMxP1xEeSiX-f9Wl6J1-I06ab01u-wVz6NhTwWVK38j9vmZarSKP4K5l-aEx-Z3JmHHxIz--sQDh12_g-3bChUTKPUclq4ufvoap95hkRCeckzVw8EoyunTP3_ZdkCL9cimlXF9wpQIygsR3qvLwZRAUkD9tY6QVv-gcIzynqsK67-myIhnvFw41WPyq2e9LQQEOc0iy2JS35d2Ww",
-];
+// Timeline Data with Real Graphigo Projects
+const timelineData = [
+    {
+        title: "Long Form Content",
+        content: (
+            <div>
+                <p className="text-neutral-300 text-xs md:text-sm font-normal mb-8">
+                    Engaging long-form content that captivates audiences and drives meaningful engagement.
+                </p>
 
-export const products = [
-    {
-        title: "Day in the life of a CEO",
-        link: "#",
-        thumbnail:
-            "https://lh3.googleusercontent.com/aida-public/AB6AXuDDzwsI6Odb_4_uUzP6gyVTLfaaGBsAc05HVu3-AK4eRkmn9uJp7Y-NliWHgbSnL2qwbrTOJ6lphgGQhHU6qs6vEZ8POMW7bKdLpFff2qLN2Id6O_RlGMVYoRZ0QnwK6M7U7PJbSmeDuBfkeAoTBHYePKOPzxWTdpLM7YuYfvjGfLLDLON8m-ONQRehQpYnsVtEpNqczcByd_BeqjJuTji7Gbbqyu_ZzOioeIpb-4qniQBykbbSSKmPuF09nP4a7lRx8bBiHLiiH6s",
+                {/* REJECTED HIRED Project */}
+                <div className="mb-8 bg-neutral-900/50 backdrop-blur-sm rounded-xl p-6 border border-neutral-800">
+                    <h3 className="text-2xl font-bold text-white mb-2">REJECTED → HIRED</h3>
+                    <p className="text-neutral-400 mb-4">A compelling narrative of perseverance and success</p>
+                    <div className="grid grid-cols-1 md:grid-cols-2 gap-4 mb-4">
+                        <div className="rounded-lg overflow-hidden">
+                            <Image
+                                src="https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?w=800&auto=format&fit=crop"
+                                alt="Professional journey"
+                                width={500}
+                                height={300}
+                                className="w-full h-48 object-cover"
+                            />
+                        </div>
+                        <div className="flex flex-col justify-center">
+                            <p className="text-sm text-neutral-400 mb-2">
+                                A powerful story showcasing the journey from rejection to success,
+                                resonating with professionals worldwide.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+
+                {/* I ALMOST GOT ARRESTED Project */}
+                <div className="mb-8 bg-neutral-900/50 backdrop-blur-sm rounded-xl p-6 border border-neutral-800">
+                    <h3 className="text-2xl font-bold text-white mb-2">I ALMOST GOT ARRESTED!</h3>
+                    <p className="text-neutral-400 mb-4">Viral storytelling at its finest</p>
+                    <div className="rounded-lg overflow-hidden mb-4">
+                        <Image
+                            src="https://images.unsplash.com/photo-1589829545856-d10d557cf95f?w=800&auto=format&fit=crop"
+                            alt="Dramatic storytelling"
+                            width={800}
+                            height={400}
+                            className="w-full h-64 object-cover"
+                        />
+                    </div>
+                    <p className="text-sm text-neutral-400">
+                        High-energy content that hooks viewers from the first second with
+                        dramatic pacing and compelling narrative structure.
+                    </p>
+                </div>
+
+                {/* $1M/YEAR AGENCY MODEL */}
+                <div className="bg-neutral-900/50 backdrop-blur-sm rounded-xl p-6 border border-neutral-800">
+                    <h3 className="text-2xl font-bold text-white mb-2">$1M/YEAR AGENCY MODEL</h3>
+                    <p className="text-neutral-400 mb-4">Educational content that delivers value</p>
+                    <div className="rounded-lg overflow-hidden mb-4">
+                        <Image
+                            src="https://images.unsplash.com/photo-1460925895917-afdab827c52f?w=800&auto=format&fit=crop"
+                            alt="Business education"
+                            width={800}
+                            height={400}
+                            className="w-full h-64 object-cover"
+                        />
+                    </div>
+                    <p className="text-sm text-neutral-400">
+                        Breaking down complex business strategies into digestible,
+                        actionable content for aspiring entrepreneurs.
+                    </p>
+                </div>
+            </div>
+        ),
     },
     {
-        title: "Summer Collection Teaser",
-        link: "#",
-        thumbnail:
-            "https://lh3.googleusercontent.com/aida-public/AB6AXuCfS4oRiIAzBL5RQFDYO2NmbKVzveWvaN4bugUeeGoaxirBGjO_I4rI06UnbmuMxP1xEeSiX-f9Wl6J1-I06ab01u-wVz6NhTwWVK38j9vmZarSKP4K5l-aEx-Z3JmHHxIz--sQDh12_g-3bChUTKPUclq4ufvoap95hkRCeckzVw8EoyunTP3_ZdkCL9cimlXF9wpQIygsR3qvLwZRAUkD9tY6QVv-gcIzynqsK67-myIhnvFw41WPyq2e9LQQEOc0iy2JS35d2Ww",
+        title: "Short Form Content",
+        content: (
+            <div>
+                <p className="text-neutral-300 text-xs md:text-sm font-normal mb-8">
+                    Viral-worthy reels and shorts designed to capture attention and drive engagement.
+                </p>
+
+                {/* Dezerv Reels */}
+                <div className="mb-8 bg-neutral-900/50 backdrop-blur-sm rounded-xl p-6 border border-neutral-800">
+                    <h3 className="text-2xl font-bold text-white mb-2">Dezerv - Financial Education Reels</h3>
+                    <p className="text-neutral-400 mb-4">Making finance accessible and engaging</p>
+                    <div className="grid grid-cols-2 md:grid-cols-3 gap-4 mb-4">
+                        {[1, 2, 3].map((i) => (
+                            <div key={i} className="aspect-[9/16] bg-neutral-800 rounded-lg overflow-hidden">
+                                <Image
+                                    src={`https://images.unsplash.com/photo-1579621970563-ebec7560ff3e?w=400&auto=format&fit=crop&q=60&crop=entropy&cs=tinysrgb&h=${700 + i * 50}`}
+                                    alt={`Dezerv reel ${i}`}
+                                    width={300}
+                                    height={500}
+                                    className="w-full h-full object-cover"
+                                />
+                            </div>
+                        ))}
+                    </div>
+                    <p className="text-sm text-neutral-400">
+                        Created engaging short-form content that simplifies complex financial
+                        concepts for a modern audience.
+                    </p>
+                </div>
+
+                {/* Global Diwali Content */}
+                <div className="mb-8 bg-neutral-900/50 backdrop-blur-sm rounded-xl p-6 border border-neutral-800">
+                    <h3 className="text-2xl font-bold text-white mb-2">How DIWALI is celebrated globally</h3>
+                    <p className="text-neutral-400 mb-4">Cultural storytelling across borders</p>
+                    <div className="rounded-lg overflow-hidden mb-4">
+                        <Image
+                            src="https://images.unsplash.com/photo-1605296867304-46d5465a13f1?w=800&auto=format&fit=crop"
+                            alt="Diwali celebrations"
+                            width={800}
+                            height={450}
+                            className="w-full h-64 object-cover"
+                        />
+                    </div>
+                    <p className="text-sm text-neutral-400">
+                        Showcasing the diversity of Diwali celebrations around the world through
+                        dynamic edits and vibrant visuals.
+                    </p>
+                </div>
+
+                {/* Want More Followers */}
+                <div className="bg-neutral-900/50 backdrop-blur-sm rounded-xl p-6 border border-neutral-800">
+                    <h3 className="text-2xl font-bold text-white mb-2">WANT MORE FOLLOWERS?</h3>
+                    <p className="text-neutral-400 mb-4">Growth-focused educational content</p>
+                    <div className="grid grid-cols-2 gap-4 mb-4">
+                        <div className="aspect-[9/16] bg-neutral-800 rounded-lg overflow-hidden">
+                            <Image
+                                src="https://images.unsplash.com/photo-1611162617474-5b21e879e113?w=400&auto=format&fit=crop"
+                                alt="Social media growth"
+                                width={300}
+                                height={500}
+                                className="w-full h-full object-cover"
+                            />
+                        </div>
+                        <div className="flex flex-col justify-center">
+                            <div className="bg-gradient-to-br from-purple-600 to-blue-600 p-6 rounded-lg mb-3">
+                                <p className="text-4xl font-bold text-white">100K+</p>
+                                <p className="text-sm text-neutral-200">Views Generated</p>
+                            </div>
+                            <p className="text-sm text-neutral-400">
+                                Strategic content designed to educate creators on growth tactics.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        ),
     },
     {
-        title: "The Future of AI is Here",
-        link: "#",
-        thumbnail:
-            "https://lh3.googleusercontent.com/aida-public/AB6AXuC4KJV2eX3u-n-lUKB8cmRcHBpYHhrtTsPxg6b1QGNHIYxvy1TIE4e8NfYjEPTy4pxr998tAaorOEdzL5vcZtSO-qvdG1Dr-QIIRH3q155b9uaolidQK5abwklClspa0w2E6FJb4eJPBluXX4IKpZzrNVbBatLk0s3pYI32ZZ99SQ3Q1gPQgs_yPoNF3N0bnWvE6x8Li11xVtJNN8nXaWi3EVdIQe5y_6nEVcFea33X5xexAEKbQ9yI72CsuNN6EWP169rk7WwWb8E",
+        title: "Corporate & Commercial",
+        content: (
+            <div>
+                <p className="text-neutral-300 text-xs md:text-sm font-normal mb-8">
+                    Professional corporate videos that elevate brand presence and communicate value.
+                </p>
+
+                {/* Superton */}
+                <div className="mb-8 bg-neutral-900/50 backdrop-blur-sm rounded-xl p-6 border border-neutral-800">
+                    <h3 className="text-2xl font-bold text-white mb-2">Superton</h3>
+                    <p className="text-neutral-400 mb-4">Sound systems brand showcase</p>
+                    <div className="rounded-lg overflow-hidden mb-4">
+                        <Image
+                            src="https://images.unsplash.com/photo-1558618666-fcd25c85cd64?w=800&auto=format&fit=crop"
+                            alt="Audio equipment"
+                            width={800}
+                            height={450}
+                            className="w-full h-64 object-cover"
+                        />
+                    </div>
+                    <p className="text-sm text-neutral-400">
+                        Cinematic product showcase highlighting premium audio technology with
+                        sleek visuals and dynamic camera work.
+                    </p>
+                </div>
+
+                {/* HDFC SKY */}
+                <div className="bg-neutral-900/50 backdrop-blur-sm rounded-xl p-6 border border-neutral-800">
+                    <h3 className="text-2xl font-bold text-white mb-2">HDFC SKY - Margin Trading Platform</h3>
+                    <p className="text-neutral-400 mb-4">Financial technology explainer</p>
+                    <div className="grid grid-cols-1 md:grid-cols-2 gap-4 mb-4">
+                        <div className="rounded-lg overflow-hidden">
+                            <Image
+                                src="https://images.unsplash.com/photo-1642790106117-e829e14a795f?w=800&auto=format&fit=crop"
+                                alt="Trading platform"
+                                width={500}
+                                height={300}
+                                className="w-full h-48 object-cover"
+                            />
+                        </div>
+                        <div className="flex flex-col justify-center bg-gradient-to-br from-blue-900 to-purple-900 rounded-lg p-6">
+                            <h4 className="text-xl font-bold text-white mb-2">Key Features</h4>
+                            <ul className="text-sm text-neutral-300 space-y-1">
+                                <li>• Clear financial messaging</li>
+                                <li>• Professional presentation</li>
+                                <li>• Trust-building visuals</li>
+                            </ul>
+                        </div>
+                    </div>
+                    <p className="text-sm text-neutral-400">
+                        Professional explainer video demystifying margin trading with clear,
+                        confident messaging for HDFC&apos;s digital platform.
+                    </p>
+                </div>
+            </div>
+        ),
     },
     {
-        title: "Investment Tips 101",
-        link: "#",
-        thumbnail:
-            "https://lh3.googleusercontent.com/aida-public/AB6AXuD_bXOo30hUUBpBSBnRjChaqh3vQH5GljqaAk_hQSPAagkqdgMUbHYiHTAOt-vdrpnzPKfWvP9kaByvN8vVcczjnc-sbZCLndAk5L5F3v_Zl3MHkbMH1Z38u1DuQcLIcRaeiqn2zOsEs12mrxyoxbFmjf_pFDLZM0HR4_ZH3yHHlDLGcpZzBtDnx-0w-a2aMMswmF6v2ewJSxkrUqcjbxehfZqr5FqyXJfnS3JOWgdIfziF3YmlYGgFCDFCEcz8M8tPBwVipUnCC5Y",
+        title: "Events & Global Projects",
+        content: (
+            <div>
+                <p className="text-neutral-300 text-xs md:text-sm font-normal mb-8">
+                    Capturing moments that matter, from Dubai to global stages.
+                </p>
+
+                {/* MECL Dubai Event */}
+                <div className="mb-8 bg-neutral-900/50 backdrop-blur-sm rounded-xl p-6 border border-neutral-800">
+                    <h3 className="text-2xl font-bold text-white mb-2">MECL Event Edit (Dubai)</h3>
+                    <p className="text-neutral-400 mb-4">International event coverage</p>
+                    <div className="rounded-lg overflow-hidden mb-4">
+                        <Image
+                            src="https://images.unsplash.com/photo-1540575467063-178a50c2df87?w=800&auto=format&fit=crop"
+                            alt="Dubai event"
+                            width={800}
+                            height={450}
+                            className="w-full h-64 object-cover"
+                        />
+                    </div>
+                    <div className="grid grid-cols-2 gap-4 mb-4">
+                        <div className="bg-amber-900/30 border border-amber-700/50 p-4 rounded-lg">
+                            <p className="text-2xl font-bold text-amber-400">Dubai</p>
+                            <p className="text-sm text-neutral-400">International Venue</p>
+                        </div>
+                        <div className="bg-blue-900/30 border border-blue-700/50 p-4 rounded-lg">
+                            <p className="text-2xl font-bold text-blue-400">Corporate</p>
+                            <p className="text-sm text-neutral-400">Event Type</p>
+                        </div>
+                    </div>
+                    <p className="text-sm text-neutral-400">
+                        Professional event videography capturing the essence of a major corporate
+                        gathering in Dubai with cinematic quality.
+                    </p>
+                </div>
+
+                {/* Saeed AlFalasi */}
+                <div className="bg-neutral-900/50 backdrop-blur-sm rounded-xl p-6 border border-neutral-800">
+                    <h3 className="text-2xl font-bold text-white mb-2">Saeed AlFalasi - Salon on Wheels</h3>
+                    <p className="text-neutral-400 mb-4">Innovative business showcase</p>
+                    <div className="rounded-lg overflow-hidden mb-4">
+                        <Image
+                            src="https://images.unsplash.com/photo-1560066984-138dadb4c035?w=800&auto=format&fit=crop"
+                            alt="Mobile salon"
+                            width={800}
+                            height={450}
+                            className="w-full h-64 object-cover"
+                        />
+                    </div>
+                    <p className="text-sm text-neutral-400">
+                        Documenting an innovative mobile salon concept with sleek visuals and
+                        compelling storytelling for a UAE-based entrepreneur.
+                    </p>
+                </div>
+            </div>
+        ),
     },
     {
-        title: "The Future of Digital Marketing",
-        link: "#",
-        thumbnail:
-            "https://lh3.googleusercontent.com/aida-public/AB6AXuASsYK9bLjVIdX-MLBcNK-5sBDQVokShgDJ3ZtPyeaKhkGn04zOBHiDyGnGEZlfPtIRaZMJBtCl9CzXJZMBlfUPI-wc3kcmVkiBC1QAX41fduRmNAJjf7_hTuj9omS6NPnRNKbTLjxpIou1nt1lQLbvgbhV9So0FD48D9ARGEkRWGApjTXerbBN_Tcy_D9Mf9n1qx24jcb47tCO_jqe1eiaVMaFHHyCE8jYtbBcQWvdKGHG5xaTmy-AAH54e4A_8fabrS12-dNAqrM",
-    },
-    {
-        title: "Scaling a Mountain",
-        link: "#",
-        thumbnail:
-            "https://lh3.googleusercontent.com/aida-public/AB6AXuCfzGJ7e7IN08qEVhHCZjlClQWXWIlyGAOB7G0G66834vQfNLhFMikPq4zxJ6S98DmRv1L0tUAKu4yz4u9n6K9dqwa_COZRGdUDYAHmORmxNfyHkiEr_9tEteK3Kjf_iHD7fuVCKceF2nzaKMD4a6pEsyW2HCSFijcYwFK-jMRemyiRCX7QibVrD3cGIktxGoUtwslLI-DbKj5BkjT5-jbz82Zzgpk1Jn75n2pkweCUDq3kj4mQRdyQd284Z8JGwqngBkLfynZpA8s",
-    },
-    {
-        title: "Company Culture",
-        link: "#",
-        thumbnail:
-            "https://lh3.googleusercontent.com/aida-public/AB6AXuCsrdnuy5uYPsSNUMcVXIn_FS_avINKM7GV2zGsqo1_f5oC21rk0Evo1UlXI6MzQgR1g6U8SL0ERWPeSG4DIeSLzZrwVapnXt1-ojVYgsCOy8eMWt6jkCwSfM7cTV_s2hNdv-Tv6SJY2pvdicWcDj5LaBwGNOCSuO-7_8E2LOVuZ7h22aRMxEsvnuixn2WwmoxE2Ey1jqnsFfqKgL24Yp_BNQriu_3vwT3e83A57XbguTbN_pa4DpOnCAzXW04seET9lba0oVFyGsA",
-    },
-    {
-        title: "Retro Gaming Tech Review",
-        link: "#",
-        thumbnail:
-            "https://lh3.googleusercontent.com/aida-public/AB6AXuDu-l-nAUzJicaXM0CrdTbfodUDGk8RbOaKbLFs4uy_pc_AsuB5BixmDWbaudA55GuvLVmLqIShI9lYENEG4j-UQmpT8naA1OrF9AISCeZxIBfxplxYwm7xaUeVnK9e2t-7BvX3hwmTj9KTrLYuf7wNAUKO74fzyJsydCqEa2UuyG6U73KpMXOjBpzVN8Xr7-sYX27L-RkU-ni-3xSZphk1VU9-D0Heity1F0RvMBzM-E_fQNgEVXcZTJtlBuSueCeFKAsuMe2cC9c",
-    },
-    {
-        title: "Fashion Editorial",
-        link: "#",
-        thumbnail:
-            "https://lh3.googleusercontent.com/aida-public/AB6AXuCfS4oRiIAzBL5RQFDYO2NmbKVzveWvaN4bugUeeGoaxirBGjO_I4rI06UnbmuMxP1xEeSiX-f9Wl6J1-I06ab01u-wVz6NhTwWVK38j9vmZarSKP4K5l-aEx-Z3JmHHxIz--sQDh12_g-3bChUTKPUclq4ufvoap95hkRCeckzVw8EoyunTP3_ZdkCL9cimlXF9wpQIygsR3qvLwZRAUkD9tY6QVv-gcIzynqsK67-myIhnvFw41WPyq2e9LQQEOc0iy2JS35d2Ww",
-    },
-    {
-        title: "Tech Gadget Review",
-        link: "#",
-        thumbnail:
-            "https://lh3.googleusercontent.com/aida-public/AB6AXuC4KJV2eX3u-n-lUKB8cmRcHBpYHhrtTsPxg6b1QGNHIYxvy1TIE4e8NfYjEPTy4pxr998tAaorOEdzL5vcZtSO-qvdG1Dr-QIIRH3q155b9uaolidQK5abwklClspa0w2E6FJb4eJPBluXX4IKpZzrNVbBatLk0s3pYI32ZZ99SQ3Q1gPQgs_yPoNF3N0bnWvE6x8Li11xVtJNN8nXaWi3EVdIQe5y_6nEVcFea33X5xexAEKbQ9yI72CsuNN6EWP169rk7WwWb8E",
-    },
-    {
-        title: "Investment Strategies",
-        link: "#",
-        thumbnail:
-            "https://lh3.googleusercontent.com/aida-public/AB6AXuD_bXOo30hUUBpBSBnRjChaqh3vQH5GljqaAk_hQSPAagkqdgMUbHYiHTAOt-vdrpnzPKfWvP9kaByvN8vVcczjnc-sbZCLndAk5L5F3v_Zl3MHkbMH1Z38u1DuQcLIcRaeiqn2zOsEs12mrxyoxbFmjf_pFDLZM0HR4_ZH3yHHlDLGcpZzBtDnx-0w-a2aMMswmF6v2ewJSxkrUqcjbxehfZqr5FqyXJfnS3JOWgdIfziF3YmlYGgFCDFCEcz8M8tPBwVipUnCC5Y",
-    },
-    {
-        title: "Lifestyle Vlog",
-        link: "#",
-        thumbnail:
-            "https://lh3.googleusercontent.com/aida-public/AB6AXuDDzwsI6Odb_4_uUzP6gyVTLfaaGBsAc05HVu3-AK4eRkmn9uJp7Y-NliWHgbSnL2qwbrTOJ6lphgGQhHU6qs6vEZ8POMW7bKdLpFff2qLN2Id6O_RlGMVYoRZ0QnwK6M7U7PJbSmeDuBfkeAoTBHYePKOPzxWTdpLM7YuYfvjGfLLDLON8m-ONQRehQpYnsVtEpNqczcByd_BeqjJuTji7Gbbqyu_ZzOioeIpb-4qniQBykbbSSKmPuF09nP4a7lRx8bBiHLiiH6s",
-    },
-    {
-        title: "Cinematic Travel",
-        link: "#",
-        thumbnail:
-            "https://lh3.googleusercontent.com/aida-public/AB6AXuCfzGJ7e7IN08qEVhHCZjlClQWXWIlyGAOB7G0G66834vQfNLhFMikPq4zxJ6S98DmRv1L0tUAKu4yz4u9n6K9dqwa_COZRGdUDYAHmORmxNfyHkiEr_9tEteK3Kjf_iHD7fuVCKceF2nzaKMD4a6pEsyW2HCSFijcYwFK-jMRemyiRCX7QibVrD3cGIktxGoUtwslLI-DbKj5BkjT5-jbz82Zzgpk1Jn75n2pkweCUDq3kj4mQRdyQd284Z8JGwqngBkLfynZpA8s",
-    },
-    {
-        title: "Corporate Documentary",
-        link: "#",
-        thumbnail:
-            "https://lh3.googleusercontent.com/aida-public/AB6AXuCsrdnuy5uYPsSNUMcVXIn_FS_avINKM7GV2zGsqo1_f5oC21rk0Evo1UlXI6MzQgR1g6U8SL0ERWPeSG4DIeSLzZrwVapnXt1-ojVYgsCOy8eMWt6jkCwSfM7cTV_s2hNdv-Tv6SJY2pvdicWcDj5LaBwGNOCSuO-7_8E2LOVuZ7h22aRMxEsvnuixn2WwmoxE2Ey1jqnsFfqKgL24Yp_BNQriu_3vwT3e83A57XbguTbN_pa4DpOnCAzXW04seET9lba0oVFyGsA",
-    },
-    {
-        title: "Gaming Review",
-        link: "#",
-        thumbnail:
-            "https://lh3.googleusercontent.com/aida-public/AB6AXuDu-l-nAUzJicaXM0CrdTbfodUDGk8RbOaKbLFs4uy_pc_AsuB5BixmDWbaudA55GuvLVmLqIShI9lYENEG4j-UQmpT8naA1OrF9AISCeZxIBfxplxYwm7xaUeVnK9e2t-7BvX3hwmTj9KTrLYuf7wNAUKO74fzyJsydCqEa2UuyG6U73KpMXOjBpzVN8Xr7-sYX27L-RkU-ni-3xSZphk1VU9-D0Heity1F0RvMBzM-E_fQNgEVXcZTJtlBuSueCeFKAsuMe2cC9c",
+        title: "Case Studies",
+        content: (
+            <div>
+                <p className="text-neutral-300 text-xs md:text-sm font-normal mb-8">
+                    Proven results that speak louder than words. Real growth, real impact.
+                </p>
+
+                {/* CA Surbhi Gandhi */}
+                <div className="mb-8 bg-gradient-to-br from-emerald-950 to-neutral-900 backdrop-blur-sm rounded-xl p-6 border border-emerald-800/50">
+                    <div className="flex items-center gap-3 mb-4">
+                        <div className="bg-emerald-600 p-2 rounded-lg">
+                            <svg className="w-6 h-6 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M13 7h8m0 0v8m0-8l-8 8-4-4-6 6" />
+                            </svg>
+                        </div>
+                        <h3 className="text-2xl font-bold text-white">CA Surbhi Gandhi</h3>
+                    </div>
+
+                    <div className="grid grid-cols-2 gap-4 mb-6">
+                        <div className="bg-neutral-950/50 border border-emerald-700/30 p-6 rounded-lg text-center">
+                            <p className="text-sm text-neutral-400 mb-1">Starting Point</p>
+                            <p className="text-4xl font-bold text-white">1K</p>
+                            <p className="text-xs text-neutral-500 mt-1">subscribers</p>
+                        </div>
+                        <div className="bg-gradient-to-br from-emerald-600 to-emerald-800 p-6 rounded-lg text-center">
+                            <p className="text-sm text-emerald-100 mb-1">Current</p>
+                            <p className="text-4xl font-bold text-white">55K</p>
+                            <p className="text-xs text-emerald-200 mt-1">subscribers</p>
+                        </div>
+                    </div>
+
+                    <div className="bg-neutral-950/50 border border-emerald-700/30 rounded-lg p-4 mb-4">
+                        <h4 className="text-lg font-semibold text-emerald-400 mb-3">Growth Strategy</h4>
+                        <ul className="space-y-2 text-sm text-neutral-300">
+                            <li className="flex items-start gap-2">
+                                <span className="text-emerald-500 mt-1">✓</span>
+                                <span>Strategic content planning focused on CA exam preparation</span>
+                            </li>
+                            <li className="flex items-start gap-2">
+                                <span className="text-emerald-500 mt-1">✓</span>
+                                <span>Consistent posting schedule with high-value educational content</span>
+                            </li>
+                            <li className="flex items-start gap-2">
+                                <span className="text-emerald-500 mt-1">✓</span>
+                                <span>Engaging thumbnails and hooks designed for YouTube algorithm</span>
+                            </li>
+                        </ul>
+                    </div>
+
+                    <div className="flex items-center justify-between bg-emerald-900/30 border border-emerald-700/30 rounded-lg p-4">
+                        <div>
+                            <p className="text-2xl font-bold text-emerald-400">5,400%</p>
+                            <p className="text-sm text-neutral-400">Growth Rate</p>
+                        </div>
+                        <div className="text-right">
+                            <p className="text-sm text-neutral-400">Platform</p>
+                            <p className="text-lg font-semibold text-white">YouTube</p>
+                        </div>
+                    </div>
+                </div>
+
+                {/* Jitu IG Coach */}
+                <div className="bg-gradient-to-br from-purple-950 to-neutral-900 backdrop-blur-sm rounded-xl p-6 border border-purple-800/50">
+                    <div className="flex items-center gap-3 mb-4">
+                        <div className="bg-purple-600 p-2 rounded-lg">
+                            <svg className="w-6 h-6 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M16 8v8m-4-5v5m-4-2v2m-2 4h12a2 2 0 002-2V6a2 2 0 00-2-2H6a2 2 0 00-2 2v12a2 2 0 002 2z" />
+                            </svg>
+                        </div>
+                        <h3 className="text-2xl font-bold text-white">Jitu - Instagram Coach</h3>
+                    </div>
+
+                    <div className="grid grid-cols-2 gap-4 mb-6">
+                        <div className="bg-neutral-950/50 border border-purple-700/30 p-6 rounded-lg text-center">
+                            <p className="text-sm text-neutral-400 mb-1">Before</p>
+                            <p className="text-4xl font-bold text-white">100K</p>
+                            <p className="text-xs text-neutral-500 mt-1">followers</p>
+                        </div>
+                        <div className="bg-gradient-to-br from-purple-600 to-purple-800 p-6 rounded-lg text-center">
+                            <p className="text-sm text-purple-100 mb-1">After</p>
+                            <p className="text-4xl font-bold text-white">400K</p>
+                            <p className="text-xs text-purple-200 mt-1">followers</p>
+                        </div>
+                    </div>
+
+                    <div className="bg-neutral-950/50 border border-purple-700/30 rounded-lg p-4 mb-4">
+                        <h4 className="text-lg font-semibold text-purple-400 mb-3">Winning Formula</h4>
+                        <ul className="space-y-2 text-sm text-neutral-300">
+                            <li className="flex items-start gap-2">
+                                <span className="text-purple-500 mt-1">✓</span>
+                                <span>Viral-worthy reels with proven hooks and retention strategies</span>
+                            </li>
+                            <li className="flex items-start gap-2">
+                                <span className="text-purple-500 mt-1">✓</span>
+                                <span>Trend analysis and rapid content deployment</span>
+                            </li>
+                            <li className="flex items-start gap-2">
+                                <span className="text-purple-500 mt-1">✓</span>
+                                <span>Data-driven editing techniques optimized for Instagram algorithm</span>
+                            </li>
+                        </ul>
+                    </div>
+
+                    <div className="flex items-center justify-between bg-purple-900/30 border border-purple-700/30 rounded-lg p-4">
+                        <div>
+                            <p className="text-2xl font-bold text-purple-400">+300K</p>
+                            <p className="text-sm text-neutral-400">Net Growth</p>
+                        </div>
+                        <div className="text-right">
+                            <p className="text-sm text-neutral-400">Platform</p>
+                            <p className="text-lg font-semibold text-white">Instagram</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        ),
     },
 ];

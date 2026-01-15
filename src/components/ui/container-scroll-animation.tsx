@@ -8,10 +8,10 @@ const images = [
     "https://jpvdsqwonlhrhjgcmyuf.supabase.co/storage/v1/object/public/video/bb.mp4",
     "https://jpvdsqwonlhrhjgcmyuf.supabase.co/storage/v1/object/public/video/gg.mp4",
     "https://jpvdsqwonlhrhjgcmyuf.supabase.co/storage/v1/object/public/video/aa.mp4",
-    "https://framerusercontent.com/assets/0ZMax4I0LMFal8udH9s6yWwlE.mp4",
+    "",
     "https://jpvdsqwonlhrhjgcmyuf.supabase.co/storage/v1/object/public/video/cc.mp4",
     "https://jpvdsqwonlhrhjgcmyuf.supabase.co/storage/v1/object/public/video/ee.mp4",
-    "https://framerusercontent.com/assets/mt5slzhfn7IPnGoxRLKawB4g0wo.mp4",
+    "",
     "https://jpvdsqwonlhrhjgcmyuf.supabase.co/storage/v1/object/public/video/ff.mp4",
 ]
 
