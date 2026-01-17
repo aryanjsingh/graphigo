@@ -15,17 +15,17 @@ const timelineData = [
                 </p>
 
                 <div className="grid grid-cols-1 gap-6">
-                    {/* REJECTED HIRED Project */}
+                    {/* ThinkSchool x Boult */}
                     <a
-                        href="https://youtu.be/LT4uTGozm4s"
+                        href="https://youtu.be/iH8IrBG4csM"
                         target="_blank"
                         rel="noopener noreferrer"
                         className="group block bg-gradient-to-br from-neutral-900/80 to-neutral-950/80 backdrop-blur-sm rounded-2xl border border-neutral-800/50 hover:border-primary/50 overflow-hidden transition-all duration-300 hover:shadow-xl hover:shadow-primary/10"
                     >
                         <div className="relative aspect-video overflow-hidden">
                             <Image
-                                src="https://img.youtube.com/vi/LT4uTGozm4s/maxresdefault.jpg"
-                                alt="REJECTED vs HIRED"
+                                src="https://img.youtube.com/vi/iH8IrBG4csM/maxresdefault.jpg"
+                                alt="ThinkSchool x Boult"
                                 width={1280}
                                 height={720}
                                 className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105"
@@ -33,7 +33,6 @@ const timelineData = [
                             <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-black/20 to-transparent" />
                             <div className="absolute inset-0 bg-black/40 group-hover:bg-black/20 transition-colors duration-300" />
 
-                            {/* Play Button */}
                             <div className="absolute inset-0 flex items-center justify-center">
                                 <div className="w-20 h-20 rounded-full bg-primary/80 backdrop-blur-sm flex items-center justify-center transform transition-all duration-300 group-hover:scale-110 group-hover:bg-primary">
                                     <svg className="w-8 h-8 text-white fill-current ml-1" viewBox="0 0 24 24">
@@ -42,7 +41,6 @@ const timelineData = [
                                 </div>
                             </div>
 
-                            {/* Badge */}
                             <div className="absolute top-4 left-4">
                                 <span className="px-3 py-1 bg-primary/90 backdrop-blur-sm text-white text-xs font-semibold rounded-full">
                                     Featured
@@ -52,15 +50,101 @@ const timelineData = [
 
                         <div className="p-6">
                             <h3 className="text-2xl font-bold text-white mb-2 group-hover:text-primary transition-colors">
-                                REJECTED vs HIRED | Aakash Bhalla
+                                JioHotstar CTO reveals how IPL streams work! | ThinkSchool x Boult
                             </h3>
                             <p className="text-neutral-400 text-sm">
-                                A powerful story showcasing the journey from rejection to success, resonating with professionals worldwide.
+                                An in-depth conversation with industry leaders discussing technology and innovation behind streaming platforms.
                             </p>
                         </div>
                     </a>
 
-                    {/* I ALMOST GOT ARRESTED Project */}
+                    {/* Marwadi University */}
+                    <a
+                        href="https://youtu.be/TQ4eXthvmDw"
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        className="group block bg-gradient-to-br from-neutral-900/80 to-neutral-950/80 backdrop-blur-sm rounded-2xl border border-neutral-800/50 hover:border-primary/50 overflow-hidden transition-all duration-300 hover:shadow-xl hover:shadow-primary/10"
+                    >
+                        <div className="relative aspect-video overflow-hidden">
+                            <Image
+                                src="https://img.youtube.com/vi/TQ4eXthvmDw/maxresdefault.jpg"
+                                alt="Marwadi University"
+                                width={1280}
+                                height={720}
+                                className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105"
+                            />
+                            <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-black/20 to-transparent" />
+                            <div className="absolute inset-0 bg-black/40 group-hover:bg-black/20 transition-colors duration-300" />
+
+                            <div className="absolute inset-0 flex items-center justify-center">
+                                <div className="w-20 h-20 rounded-full bg-primary/80 backdrop-blur-sm flex items-center justify-center transform transition-all duration-300 group-hover:scale-110 group-hover:bg-primary">
+                                    <svg className="w-8 h-8 text-white fill-current ml-1" viewBox="0 0 24 24">
+                                        <path d="M8 5v14l11-7z" />
+                                    </svg>
+                                </div>
+                            </div>
+
+                            <div className="absolute top-4 left-4">
+                                <span className="px-3 py-1 bg-emerald-600/90 backdrop-blur-sm text-white text-xs font-semibold rounded-full">
+                                    Corporate
+                                </span>
+                            </div>
+                        </div>
+
+                        <div className="p-6">
+                            <h3 className="text-2xl font-bold text-white mb-2 group-hover:text-primary transition-colors">
+                                Marwadi University | Educational Excellence
+                            </h3>
+                            <p className="text-neutral-400 text-sm">
+                                Professional corporate video showcasing institutional excellence and vision.
+                            </p>
+                        </div>
+                    </a>
+
+                    {/* Off Filter Show x Graphigo */}
+                    <a
+                        href="https://youtu.be/E1bnDfy_pJI"
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        className="group block bg-gradient-to-br from-neutral-900/80 to-neutral-950/80 backdrop-blur-sm rounded-2xl border border-neutral-800/50 hover:border-primary/50 overflow-hidden transition-all duration-300 hover:shadow-xl hover:shadow-primary/10"
+                    >
+                        <div className="relative aspect-video overflow-hidden">
+                            <Image
+                                src="https://img.youtube.com/vi/E1bnDfy_pJI/maxresdefault.jpg"
+                                alt="Off Filter Show"
+                                width={1280}
+                                height={720}
+                                className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105"
+                            />
+                            <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-black/20 to-transparent" />
+                            <div className="absolute inset-0 bg-black/40 group-hover:bg-black/20 transition-colors duration-300" />
+
+                            <div className="absolute inset-0 flex items-center justify-center">
+                                <div className="w-20 h-20 rounded-full bg-primary/80 backdrop-blur-sm flex items-center justify-center transform transition-all duration-300 group-hover:scale-110 group-hover:bg-primary">
+                                    <svg className="w-8 h-8 text-white fill-current ml-1" viewBox="0 0 24 24">
+                                        <path d="M8 5v14l11-7z" />
+                                    </svg>
+                                </div>
+                            </div>
+
+                            <div className="absolute top-4 left-4">
+                                <span className="px-3 py-1 bg-purple-600/90 backdrop-blur-sm text-white text-xs font-semibold rounded-full">
+                                    Podcast
+                                </span>
+                            </div>
+                        </div>
+
+                        <div className="p-6">
+                            <h3 className="text-2xl font-bold text-white mb-2 group-hover:text-primary transition-colors">
+                                Off Filter Show x Graphigo | Unfiltered Conversations
+                            </h3>
+                            <p className="text-neutral-400 text-sm">
+                                Authentic, unfiltered discussions bringing fresh perspectives and genuine insights.
+                            </p>
+                        </div>
+                    </a>
+
+                    {/* Avanti Nagral */}
                     <a
                         href="https://youtu.be/9uFoOYpNMqM"
                         target="_blank"
@@ -78,7 +162,6 @@ const timelineData = [
                             <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-black/20 to-transparent" />
                             <div className="absolute inset-0 bg-black/40 group-hover:bg-black/20 transition-colors duration-300" />
 
-                            {/* Play Button */}
                             <div className="absolute inset-0 flex items-center justify-center">
                                 <div className="w-20 h-20 rounded-full bg-primary/80 backdrop-blur-sm flex items-center justify-center transform transition-all duration-300 group-hover:scale-110 group-hover:bg-primary">
                                     <svg className="w-8 h-8 text-white fill-current ml-1" viewBox="0 0 24 24">
@@ -87,7 +170,6 @@ const timelineData = [
                                 </div>
                             </div>
 
-                            {/* Badge */}
                             <div className="absolute top-4 left-4">
                                 <span className="px-3 py-1 bg-red-600/90 backdrop-blur-sm text-white text-xs font-semibold rounded-full">
                                     Viral
@@ -105,17 +187,17 @@ const timelineData = [
                         </div>
                     </a>
 
-                    {/* $1M/YEAR AGENCY MODEL */}
+                    {/* Aakash Bhalla */}
                     <a
-                        href="https://youtu.be/Z4XQj2Iuz98"
+                        href="https://youtu.be/LT4uTGozm4s"
                         target="_blank"
                         rel="noopener noreferrer"
                         className="group block bg-gradient-to-br from-neutral-900/80 to-neutral-950/80 backdrop-blur-sm rounded-2xl border border-neutral-800/50 hover:border-primary/50 overflow-hidden transition-all duration-300 hover:shadow-xl hover:shadow-primary/10"
                     >
                         <div className="relative aspect-video overflow-hidden">
                             <Image
-                                src="https://img.youtube.com/vi/Z4XQj2Iuz98/maxresdefault.jpg"
-                                alt="$1M/YEAR AGENCY MODEL"
+                                src="https://img.youtube.com/vi/LT4uTGozm4s/maxresdefault.jpg"
+                                alt="REJECTED vs HIRED"
                                 width={1280}
                                 height={720}
                                 className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105"
@@ -123,7 +205,6 @@ const timelineData = [
                             <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-black/20 to-transparent" />
                             <div className="absolute inset-0 bg-black/40 group-hover:bg-black/20 transition-colors duration-300" />
 
-                            {/* Play Button */}
                             <div className="absolute inset-0 flex items-center justify-center">
                                 <div className="w-20 h-20 rounded-full bg-primary/80 backdrop-blur-sm flex items-center justify-center transform transition-all duration-300 group-hover:scale-110 group-hover:bg-primary">
                                     <svg className="w-8 h-8 text-white fill-current ml-1" viewBox="0 0 24 24">
@@ -132,20 +213,19 @@ const timelineData = [
                                 </div>
                             </div>
 
-                            {/* Badge */}
                             <div className="absolute top-4 left-4">
-                                <span className="px-3 py-1 bg-emerald-600/90 backdrop-blur-sm text-white text-xs font-semibold rounded-full">
-                                    Educational
+                                <span className="px-3 py-1 bg-blue-600/90 backdrop-blur-sm text-white text-xs font-semibold rounded-full">
+                                    Inspiring
                                 </span>
                             </div>
                         </div>
 
                         <div className="p-6">
                             <h3 className="text-2xl font-bold text-white mb-2 group-hover:text-primary transition-colors">
-                                $1M/YEAR AGENCY MODEL | Jitu
+                                REJECTED vs HIRED | Aakash Bhalla
                             </h3>
                             <p className="text-neutral-400 text-sm">
-                                Breaking down complex business strategies into digestible, actionable content for aspiring entrepreneurs.
+                                A powerful story showcasing the journey from rejection to success, resonating with professionals worldwide.
                             </p>
                         </div>
                     </a>
@@ -162,7 +242,50 @@ const timelineData = [
                 </p>
 
                 <div className="grid grid-cols-1 gap-6">
-                    {/* ThinkSchool x Boult */}
+                    {/* Jitu Podcast */}
+                    <a
+                        href="https://youtu.be/Z4XQj2Iuz98"
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        className="group block bg-gradient-to-br from-neutral-900/80 to-neutral-950/80 backdrop-blur-sm rounded-2xl border border-neutral-800/50 hover:border-primary/50 overflow-hidden transition-all duration-300 hover:shadow-xl hover:shadow-primary/10"
+                    >
+                        <div className="relative aspect-video overflow-hidden">
+                            <Image
+                                src="https://img.youtube.com/vi/Z4XQj2Iuz98/maxresdefault.jpg"
+                                alt="Jitu Podcast"
+                                width={1280}
+                                height={720}
+                                className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105"
+                            />
+                            <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-black/20 to-transparent" />
+                            <div className="absolute inset-0 bg-black/40 group-hover:bg-black/20 transition-colors duration-300" />
+
+                            <div className="absolute inset-0 flex items-center justify-center">
+                                <div className="w-20 h-20 rounded-full bg-primary/80 backdrop-blur-sm flex items-center justify-center transform transition-all duration-300 group-hover:scale-110 group-hover:bg-primary">
+                                    <svg className="w-8 h-8 text-white fill-current ml-1" viewBox="0 0 24 24">
+                                        <path d="M8 5v14l11-7z" />
+                                    </svg>
+                                </div>
+                            </div>
+
+                            <div className="absolute top-4 left-4">
+                                <span className="px-3 py-1 bg-purple-600/90 backdrop-blur-sm text-white text-xs font-semibold rounded-full">
+                                    Podcast
+                                </span>
+                            </div>
+                        </div>
+
+                        <div className="p-6">
+                            <h3 className="text-2xl font-bold text-white mb-2 group-hover:text-primary transition-colors">
+                                $1M/YEAR AGENCY MODEL | Jitu Podcast
+                            </h3>
+                            <p className="text-neutral-400 text-sm">
+                                Breaking down complex business strategies into digestible, actionable content for aspiring entrepreneurs.
+                            </p>
+                        </div>
+                    </a>
+
+                    {/* ThinkSchool Boult */}
                     <a
                         href="https://youtu.be/iH8IrBG4csM"
                         target="_blank"
@@ -180,7 +303,6 @@ const timelineData = [
                             <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-black/20 to-transparent" />
                             <div className="absolute inset-0 bg-black/40 group-hover:bg-black/20 transition-colors duration-300" />
 
-                            {/* Play Button */}
                             <div className="absolute inset-0 flex items-center justify-center">
                                 <div className="w-20 h-20 rounded-full bg-primary/80 backdrop-blur-sm flex items-center justify-center transform transition-all duration-300 group-hover:scale-110 group-hover:bg-primary">
                                     <svg className="w-8 h-8 text-white fill-current ml-1" viewBox="0 0 24 24">
@@ -189,7 +311,6 @@ const timelineData = [
                                 </div>
                             </div>
 
-                            {/* Badge */}
                             <div className="absolute top-4 left-4">
                                 <span className="px-3 py-1 bg-purple-600/90 backdrop-blur-sm text-white text-xs font-semibold rounded-full">
                                     Podcast
@@ -199,7 +320,7 @@ const timelineData = [
 
                         <div className="p-6">
                             <h3 className="text-2xl font-bold text-white mb-2 group-hover:text-primary transition-colors">
-                                JioHotstar CTO reveals how IPL streams work! | ThinkSchool
+                                JioHotstar CTO reveals how IPL streams work! | ThinkSchool x Boult
                             </h3>
                             <p className="text-neutral-400 text-sm">
                                 An in-depth conversation with industry leaders discussing technology and innovation behind streaming platforms.
@@ -225,7 +346,6 @@ const timelineData = [
                             <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-black/20 to-transparent" />
                             <div className="absolute inset-0 bg-black/40 group-hover:bg-black/20 transition-colors duration-300" />
 
-                            {/* Play Button */}
                             <div className="absolute inset-0 flex items-center justify-center">
                                 <div className="w-20 h-20 rounded-full bg-primary/80 backdrop-blur-sm flex items-center justify-center transform transition-all duration-300 group-hover:scale-110 group-hover:bg-primary">
                                     <svg className="w-8 h-8 text-white fill-current ml-1" viewBox="0 0 24 24">
@@ -234,7 +354,6 @@ const timelineData = [
                                 </div>
                             </div>
 
-                            {/* Badge */}
                             <div className="absolute top-4 left-4">
                                 <span className="px-3 py-1 bg-purple-600/90 backdrop-blur-sm text-white text-xs font-semibold rounded-full">
                                     Podcast
@@ -244,10 +363,53 @@ const timelineData = [
 
                         <div className="p-6">
                             <h3 className="text-2xl font-bold text-white mb-2 group-hover:text-primary transition-colors">
-                                Off Filter Show | Unfiltered Conversations
+                                Off Filter Show x Graphigo | Unfiltered Conversations
                             </h3>
                             <p className="text-neutral-400 text-sm">
                                 Authentic, unfiltered discussions bringing fresh perspectives and genuine insights.
+                            </p>
+                        </div>
+                    </a>
+
+                    {/* ThinkSchool x Manyavar */}
+                    <a
+                        href="https://youtu.be/-tbJl3rrN78"
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        className="group block bg-gradient-to-br from-neutral-900/80 to-neutral-950/80 backdrop-blur-sm rounded-2xl border border-neutral-800/50 hover:border-primary/50 overflow-hidden transition-all duration-300 hover:shadow-xl hover:shadow-primary/10"
+                    >
+                        <div className="relative aspect-video overflow-hidden">
+                            <Image
+                                src="https://img.youtube.com/vi/-tbJl3rrN78/maxresdefault.jpg"
+                                alt="ThinkSchool x Manyavar"
+                                width={1280}
+                                height={720}
+                                className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105"
+                            />
+                            <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-black/20 to-transparent" />
+                            <div className="absolute inset-0 bg-black/40 group-hover:bg-black/20 transition-colors duration-300" />
+
+                            <div className="absolute inset-0 flex items-center justify-center">
+                                <div className="w-20 h-20 rounded-full bg-primary/80 backdrop-blur-sm flex items-center justify-center transform transition-all duration-300 group-hover:scale-110 group-hover:bg-primary">
+                                    <svg className="w-8 h-8 text-white fill-current ml-1" viewBox="0 0 24 24">
+                                        <path d="M8 5v14l11-7z" />
+                                    </svg>
+                                </div>
+                            </div>
+
+                            <div className="absolute top-4 left-4">
+                                <span className="px-3 py-1 bg-purple-600/90 backdrop-blur-sm text-white text-xs font-semibold rounded-full">
+                                    Podcast
+                                </span>
+                            </div>
+                        </div>
+
+                        <div className="p-6">
+                            <h3 className="text-2xl font-bold text-white mb-2 group-hover:text-primary transition-colors">
+                                THE MAN WHO GOT KASAB HANGED | ThinkSchool x Manyavar
+                            </h3>
+                            <p className="text-neutral-400 text-sm">
+                                Cinematic storytelling combining brand narrative with powerful historical storytelling.
                             </p>
                         </div>
                     </a>
