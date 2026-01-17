@@ -34,85 +34,85 @@ const testimonials = [
   {
     quote:
       "Working with Graphigo was a game-changer. Our engagement has skyrocketed since we started.",
-    name: "Creator Four",
-    designation: "Brand Ambassador",
+    name: "Jitu IG Coach",
+    designation: "IG Coach",
     src: "/Creators photos/4.png",
   },
   {
     quote:
       "Graphigo has completely transformed our content strategy. Their attention to detail is unmatched.",
-    name: "Creator One",
-    designation: "Content Creator",
+    name: "Paritosh Anand",
+    designation: "Wesmile media",
     src: "/Creators photos/1.png",
   },
   {
     quote:
       "The team at Graphigo is incredibly talented. They brought our vision to life perfectly.",
-    name: "Creator Two",
-    designation: "YouTuber",
+    name: "Arvind Arora",
+    designation: "A2 motivation",
     src: "/Creators photos/2.png",
   },
   {
     quote:
       "Professional, creative, and efficient. I highly recommend Graphigo for any video production needs.",
-    name: "Creator Three",
+    name: "Surbhi Gandhi",
     designation: "Influencer",
     src: "/Creators photos/3.png",
   },
   {
     quote:
       "They truly understand the nuances of social media content. The results speak for themselves.",
-    name: "Creator Five",
-    designation: "Digital Marketer",
+    name: "Barkha Singh",
+    designation: "Actress",
     src: "/Creators photos/5.png",
   },
   {
     quote:
       "I'm blown away by the quality of the edits. Graphigo is the best in the business.",
-    name: "Creator Six",
-    designation: "Vlogger",
+    name: "Avanti Nagral",
+    designation: "Singer, Influencer",
     src: "/Creators photos/6.png",
   },
   {
     quote:
       "Fast turnaround times and exceptional quality. Graphigo exceeded all our expectations.",
-    name: "Creator Seven",
+    name: "Raj Samani",
     designation: "Entrepreneur",
     src: "/Creators photos/7.png",
   },
   {
     quote:
       "The storytelling in their videos is captivating. They know how to keep the audience engaged.",
-    name: "Creator Eight",
-    designation: "Storyteller",
+    name: "Shivansh Garg",
+    designation: "Creator",
     src: "/Creators photos/8.png",
   },
   {
     quote:
       "Graphigo made the entire process seamless. I couldn't be happier with the final product.",
-    name: "Creator Nine",
-    designation: "Creative Director",
+    name: "Ishaan Sharma",
+    designation: "Creator",
     src: "/Creators photos/9.png",
   },
   {
     quote:
       "Their creativity knows no bounds. Graphigo helps us stand out in a crowded market.",
-    name: "Creator Ten",
-    designation: "Marketing Head",
+    name: "Manveer Singh",
+    designation: "Youtuber",
     src: "/Creators photos/10.png",
   },
   {
     quote:
       "A dedicated team that goes above and beyond. Graphigo is a partner you can trust.",
-    name: "Creator Eleven",
-    designation: "Business Owner",
+    name: "Vivek Bindra",
+    designation: "Business Coach",
     src: "/Creators photos/13.png",
   },
   {
     quote:
       "Start-to-finish excellence. Graphigo is simply the best choice for video content.",
-    name: "Dev",
-    designation: "Developer",
+    name: "Aryan Singh",
+    designation: "Founder",
     src: "/Creators photos/dev .png",
   },
 ];

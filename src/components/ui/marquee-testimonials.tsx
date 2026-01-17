@@ -59,7 +59,13 @@ export const MarqueeTestimonials = ({
     const secondRow = testimonials.slice(mid);
 
     return (
-        <div className={cn("relative flex h-full w-full flex-col items-center justify-center gap-8 overflow-hidden bg-neutral-950 py-20", className)}>
+        <div className={cn("relative flex h-full w-full flex-col items-center justify-center gap-12 overflow-hidden bg-neutral-950 py-24", className)}>
+            <div className="text-center space-y-4 mb-8">
+                <h2 className="text-4xl md:text-6xl font-bold text-white tracking-tight">
+                    Beyond <span className="text-primary">founders</span> <br className="md:hidden" />
+                    and <span className="text-primary">creators.</span>
+                </h2>
+            </div>
             <div className="flex flex-col gap-4 w-full">
                 <Marquee pauseOnHover className="[--duration:40s]">
                     {firstRow.map((testimonial, idx) => (
