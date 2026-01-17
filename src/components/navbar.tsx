@@ -3,6 +3,7 @@
 import { useState, useEffect } from "react";
 import Link from "next/link";
 import { cn } from "@/lib/utils";
+import { ContactModal } from "./contact-modal";
 
 export function Navbar() {
     const [isScrolled, setIsScrolled] = useState(false);
@@ -99,12 +100,10 @@ export function Navbar() {
                 </div>
 
                 <div className="flex items-center">
-                    <Link
-                        href="/contact"
+                    <ContactModal
+                        triggerText="Contact Us"
                         className="rounded-full font-bold relative cursor-pointer hover:-translate-y-0.5 transition duration-200 inline-block text-center bg-gradient-to-b from-primary to-primary/80 text-primary-foreground shadow-[0px_2px_0px_0px_rgba(255,255,255,0.3)_inset] px-6 py-2 text-sm"
-                    >
-                        Contact Us
-                    </Link>
+                    />
                 </div>
             </header>
 
@@ -171,14 +170,11 @@ export function Navbar() {
                             >
                                 About Us
                             </Link>
-                            <div className="border-t border-border/50 pt-4 mt-4">
-                                <Link
-                                    href="/contact"
-                                    onClick={() => setIsMobileMenuOpen(false)}
+                            <div className="border-t border-border/50 pt-4 mt-4 w-full">
+                                <ContactModal
+                                    triggerText="Contact Us"
                                     className="block w-full px-4 py-3 text-lg font-bold text-center bg-gradient-to-b from-primary to-primary/80 text-primary-foreground rounded-full shadow-lg hover:-translate-y-0.5 transition-all duration-200"
-                                >
-                                    Contact Us
-                                </Link>
+                                />
                             </div>
                         </nav>
                     </div>
