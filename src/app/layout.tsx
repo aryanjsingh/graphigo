@@ -23,6 +23,9 @@ const roadRage = localFont({
 export const metadata: Metadata = {
   title: "Graphigo",
   description: "Next-generation web application built with Next.js and Aceternity UI",
+  icons: {
+    icon: "/favicon.ico",
+  },
 };
 
 export default function RootLayout({
