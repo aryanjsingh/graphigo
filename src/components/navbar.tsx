@@ -57,7 +57,7 @@ export function Navbar() {
             {/* Desktop Header */}
             <header
                 className={cn(
-                    "fixed top-4 inset-x-0 z-[5000] mx-auto hidden md:flex w-full flex-row items-center justify-between self-start rounded-full bg-background/80 backdrop-blur-sm border border-border/50 shadow-lg transition-all duration-300 py-2",
+                    "fixed top-4 inset-x-0 z-[5000] mx-auto hidden md:flex w-full flex-row items-center justify-between self-start rounded-full bg-background/60 backdrop-blur-md border border-white/10 shadow-lg transition-all duration-300 py-2",
                     isScrolled ? "max-w-2xl px-3" : "max-w-4xl px-6"
                 )}
                 style={{
@@ -108,7 +108,7 @@ export function Navbar() {
             </header>
 
             {/* Mobile Header */}
-            <header className="fixed top-4 inset-x-0 z-[5000] mx-4 flex w-auto flex-row items-center justify-between rounded-full bg-background/80 backdrop-blur-sm border border-border/50 shadow-lg md:hidden px-4 py-3">
+            <header className="fixed top-4 inset-x-0 z-[5000] mx-4 flex w-auto flex-row items-center justify-between rounded-full bg-background/60 backdrop-blur-md border border-white/10 shadow-lg md:hidden px-4 py-3">
                 <Link
                     className="flex items-center justify-center gap-2"
                     href="/"

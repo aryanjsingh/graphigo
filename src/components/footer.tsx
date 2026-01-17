@@ -3,29 +3,18 @@ import { Button } from "@/components/ui/button"
 
 export function Footer() {
     return (
-        <footer className="relative pt-20 pb-8 overflow-hidden bg-background">
+        <footer className="relative pt-20 pb-8 overflow-hidden bg-primary text-primary-foreground">
             <div
                 className="absolute inset-0 pointer-events-none"
                 style={{
                     background: `linear-gradient(to bottom, 
             transparent 0%, 
-            transparent 40%,
-            rgba(0, 222, 222, 0.05) 60%,
-            rgba(0, 222, 222, 0.15) 80%,
-            rgba(0, 222, 222, 0.3) 100%
+            rgba(0, 0, 0, 0.2) 100%
           )`,
                 }}
             />
 
-            <div
-                className="absolute inset-x-0 bottom-0 h-32 pointer-events-none"
-                style={{
-                    background: `linear-gradient(to top, 
-            rgba(0, 222, 222, 0.02) 0%,
-            transparent 100%
-          )`,
-                }}
-            />
+
 
             <div className="relative mx-auto max-w-7xl px-6">
                 <div className="flex justify-center mb-16">
@@ -44,7 +33,7 @@ export function Footer() {
                     <div className="grid grid-cols-1 sm:grid-cols-3 gap-12 text-center sm:text-left">
                         {/* Navigate Column */}
                         <div>
-                            <h3 className="text-white font-semibold text-lg mb-6">Navigate</h3>
+                            <h3 className="text-primary-foreground font-semibold text-lg mb-6">Navigate</h3>
                             <ul className="space-y-3">
                                 <li>
                                     <Link href="#" className="text-gray-400 hover:text-white transition-colors">
@@ -62,12 +51,12 @@ export function Footer() {
                                     </Link>
                                 </li>
                                 <li>
-                                    <Link href="#" className="text-gray-400 hover:text-white transition-colors">
+                                    <Link href="#" className="text-primary-foreground/70 hover:text-primary-foreground transition-colors">
                                         Creators
                                     </Link>
                                 </li>
                                 <li>
-                                    <Link href="#" className="text-gray-400 hover:text-white transition-colors">
+                                    <Link href="#" className="text-primary-foreground/70 hover:text-primary-foreground transition-colors">
                                         FAQs
                                     </Link>
                                 </li>
@@ -76,25 +65,25 @@ export function Footer() {
 
                         {/* Get in touch Column */}
                         <div>
-                            <h3 className="text-white font-semibold text-lg mb-6">Get in touch</h3>
+                            <h3 className="text-primary-foreground font-semibold text-lg mb-6">Get in touch</h3>
                             <ul className="space-y-3">
                                 <li>
-                                    <Link href="#" className="text-gray-400 hover:text-white transition-colors">
+                                    <Link href="#" className="text-primary-foreground/70 hover:text-primary-foreground transition-colors">
                                         Email
                                     </Link>
                                 </li>
                                 <li>
-                                    <Link href="#" className="text-gray-400 hover:text-white transition-colors">
+                                    <Link href="#" className="text-primary-foreground/70 hover:text-primary-foreground transition-colors">
                                         Instagram
                                     </Link>
                                 </li>
                                 <li>
-                                    <Link href="#" className="text-gray-400 hover:text-white transition-colors">
+                                    <Link href="#" className="text-primary-foreground/70 hover:text-primary-foreground transition-colors">
                                         Youtube
                                     </Link>
                                 </li>
                                 <li>
-                                    <Link href="#" className="text-gray-400 hover:text-white transition-colors">
+                                    <Link href="#" className="text-primary-foreground/70 hover:text-primary-foreground transition-colors">
                                         LinkedIn
                                     </Link>
                                 </li>
@@ -103,20 +92,20 @@ export function Footer() {
 
                         {/* Useful Links Column */}
                         <div>
-                            <h3 className="text-white font-semibold text-lg mb-6">Useful Links</h3>
+                            <h3 className="text-primary-foreground font-semibold text-lg mb-6">Useful Links</h3>
                             <ul className="space-y-3">
                                 <li>
-                                    <Link href="#" className="text-gray-400 hover:text-white transition-colors">
+                                    <Link href="#" className="text-primary-foreground/70 hover:text-primary-foreground transition-colors">
                                         Terms & Conditions
                                     </Link>
                                 </li>
                                 <li>
-                                    <Link href="#" className="text-gray-400 hover:text-white transition-colors">
+                                    <Link href="#" className="text-primary-foreground/70 hover:text-primary-foreground transition-colors">
                                         Privacy Policy
                                     </Link>
                                 </li>
                                 <li>
-                                    <Link href="#" className="text-gray-400 hover:text-white transition-colors">
+                                    <Link href="#" className="text-primary-foreground/70 hover:text-primary-foreground transition-colors">
                                         Refund & Cancellation
                                     </Link>
                                 </li>
@@ -125,9 +114,9 @@ export function Footer() {
                     </div>
                 </div>
 
-                <div className="flex flex-col sm:flex-row items-center justify-between gap-4 pt-8 border-t border-gray-800">
-                    <p className="text-gray-400 text-sm">©Graphigo 2025. All rights reserved</p>
-                    <p className="text-gray-400 text-sm">Crafted with passion</p>
+                <div className="flex flex-col sm:flex-row items-center justify-between gap-4 pt-8 border-t border-primary-foreground/20">
+                    <p className="text-primary-foreground/70 text-sm">©Graphigo 2025. All rights reserved</p>
+                    <p className="text-primary-foreground/70 text-sm">Crafted with passion</p>
                 </div>
             </div>
         </footer>
