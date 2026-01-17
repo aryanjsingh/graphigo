@@ -1,8 +1,8 @@
 import React from 'react';
 
 export default function VideoCarousel() {
-    // YouTube video data from provided links
-    const thumbnails = [
+    // Layer 1 - YouTube video data (scrolls left)
+    const layer1Videos = [
         { id: 1, title: 'ThinkSchool x Boult', videoId: 'iH8IrBG4csM', url: 'https://youtu.be/iH8IrBG4csM' },
         { id: 2, title: 'Marwadi University', videoId: 'TQ4eXthvmDw', url: 'https://youtu.be/TQ4eXthvmDw' },
         { id: 3, title: 'Off Filter Show x Graphigo', videoId: 'E1bnDfy_pJI', url: 'https://youtu.be/E1bnDfy_pJI' },
@@ -12,8 +12,18 @@ export default function VideoCarousel() {
         { id: 7, title: 'ThinkSchool x Manyavar', videoId: '-tbJl3rrN78', url: 'https://youtu.be/-tbJl3rrN78' },
     ];
 
+    // Layer 2 - New YouTube videos (scrolls right)
+    const layer2Videos = [
+        { id: 1, title: 'Video 1', videoId: '8nHIyH-O4Ag', url: 'https://youtu.be/8nHIyH-O4Ag' },
+        { id: 2, title: 'Video 2', videoId: '_8tIhVQ4C3M', url: 'https://youtu.be/_8tIhVQ4C3M' },
+        { id: 3, title: 'Video 3', videoId: 'xwQkrMbcHoM', url: 'https://youtu.be/xwQkrMbcHoM' },
+        { id: 4, title: 'Video 4', videoId: '52erXtIt3_0', url: 'https://youtu.be/52erXtIt3_0' },
+        { id: 5, title: 'Video 5', videoId: 'vrKbeFaQaX0', url: 'https://youtu.be/vrKbeFaQaX0' },
+    ];
+
     // Duplicate items for seamless infinite scroll
-    const duplicatedThumbnails = [...thumbnails, ...thumbnails, ...thumbnails];
+    const duplicatedLayer1 = [...layer1Videos, ...layer1Videos, ...layer1Videos];
+    const duplicatedLayer2 = [...layer2Videos, ...layer2Videos, ...layer2Videos];
 
     return (
         <section className="relative w-full py-24 bg-background overflow-hidden">
@@ -26,7 +36,7 @@ export default function VideoCarousel() {
             {/* Layer 1 - Scrolls Left */}
             <div className="mb-6">
                 <div className="flex animate-scroll-left w-max">
-                    {duplicatedThumbnails.map((item, index) => (
+                    {duplicatedLayer1.map((item, index) => (
                         <div
                             key={`layer1-${index}`}
                             className="relative mx-3 group cursor-pointer"
@@ -61,7 +71,7 @@ export default function VideoCarousel() {
             {/* Layer 2 - Scrolls Right */}
             <div>
                 <div className="flex animate-scroll-right w-max">
-                    {duplicatedThumbnails.map((item, index) => (
+                    {duplicatedLayer2.map((item, index) => (
                         <div
                             key={`layer2-${index}`}
                             className="relative mx-3 group cursor-pointer"
