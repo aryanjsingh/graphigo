@@ -3,6 +3,7 @@ import React from "react";
 import Image from "next/image";
 import { Timeline } from "@/components/ui/timeline";
 import { BackgroundBeams } from "@/components/ui/background-beams";
+import { BeforeAfterComparison } from "@/components/ui/before-after-cmp";
 
 // Timeline Data with Real Graphigo Projects
 const timelineData = [
@@ -787,6 +788,11 @@ export default function WorksPage() {
 
             {/* Header Removed as per request, added space for navbar */}
             <div className="pt-40"></div>
+
+            {/* Before After Transformation */}
+            <div className="relative z-10">
+                <BeforeAfterComparison />
+            </div>
 
             {/* Timeline Component */}
             <div className="relative z-10">
