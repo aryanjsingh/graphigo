@@ -453,6 +453,7 @@ const timelineData = [
                         </div>
                         <h3 className="text-2xl font-bold text-white">CA Surbhi Gandhi</h3>
                     </div>
+                    <p className="text-primary text-sm font-semibold mb-4">Founder Profiro and Creator</p>
 
                     <div className="grid grid-cols-2 gap-4 mb-6">
                         <div className="bg-neutral-950/50 border border-emerald-700/30 p-6 rounded-lg text-center">
@@ -462,33 +463,33 @@ const timelineData = [
                         </div>
                         <div className="bg-gradient-to-br from-emerald-600 to-emerald-800 p-6 rounded-lg text-center">
                             <p className="text-sm text-emerald-100 mb-1">Current</p>
-                            <p className="text-4xl font-bold text-white">55K</p>
+                            <p className="text-4xl font-bold text-white">66K</p>
                             <p className="text-xs text-emerald-200 mt-1">subscribers</p>
                         </div>
                     </div>
 
                     <div className="bg-neutral-950/50 border border-emerald-700/30 rounded-lg p-4 mb-4">
-                        <h4 className="text-lg font-semibold text-emerald-400 mb-3">Growth Strategy</h4>
+                        <h4 className="text-lg font-semibold text-emerald-400 mb-3">Right Strategy and Production</h4>
                         <ul className="space-y-2 text-sm text-neutral-300">
                             <li className="flex items-start gap-2">
                                 <span className="text-emerald-500 mt-1">✓</span>
-                                <span>Strategic content planning focused on CA exam preparation</span>
+                                <span>Expert CA exam preparation content with strategic planning</span>
                             </li>
                             <li className="flex items-start gap-2">
                                 <span className="text-emerald-500 mt-1">✓</span>
-                                <span>Consistent posting schedule with high-value educational content</span>
+                                <span>Professional production quality enhancing educational value</span>
                             </li>
                             <li className="flex items-start gap-2">
                                 <span className="text-emerald-500 mt-1">✓</span>
-                                <span>Engaging thumbnails and hooks designed for YouTube algorithm</span>
+                                <span>Algorithm-optimized thumbnails and hooks for maximum reach</span>
                             </li>
                         </ul>
                     </div>
 
                     <div className="flex items-center justify-between bg-emerald-900/30 border border-emerald-700/30 rounded-lg p-4">
                         <div>
-                            <p className="text-2xl font-bold text-emerald-400">5,400%</p>
-                            <p className="text-sm text-neutral-400">Growth Rate</p>
+                            <p className="text-2xl font-bold text-emerald-400">4 Months</p>
+                            <p className="text-sm text-neutral-400">Timeframe</p>
                         </div>
                         <div className="text-right">
                             <p className="text-sm text-neutral-400">Platform</p>
@@ -505,8 +506,9 @@ const timelineData = [
                                 <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M16 8v8m-4-5v5m-4-2v2m-2 4h12a2 2 0 002-2V6a2 2 0 00-2-2H6a2 2 0 00-2 2v12a2 2 0 002 2z" />
                             </svg>
                         </div>
-                        <h3 className="text-2xl font-bold text-white">Jitu - Instagram Coach</h3>
+                        <h3 className="text-2xl font-bold text-white">Jitu IG Coach</h3>
                     </div>
+                    <p className="text-primary text-sm font-semibold mb-4">Instagram Coach and Creator</p>
 
                     <div className="grid grid-cols-2 gap-4 mb-6">
                         <div className="bg-neutral-950/50 border border-purple-700/30 p-6 rounded-lg text-center">
@@ -522,27 +524,27 @@ const timelineData = [
                     </div>
 
                     <div className="bg-neutral-950/50 border border-purple-700/30 rounded-lg p-4 mb-4">
-                        <h4 className="text-lg font-semibold text-purple-400 mb-3">Winning Formula</h4>
+                        <h4 className="text-lg font-semibold text-purple-400 mb-3">Right Hooks and Production</h4>
                         <ul className="space-y-2 text-sm text-neutral-300">
                             <li className="flex items-start gap-2">
                                 <span className="text-purple-500 mt-1">✓</span>
-                                <span>Viral-worthy reels with proven hooks and retention strategies</span>
+                                <span>Generated 3.5B+ Views & 3M+ followers through viral content</span>
                             </li>
                             <li className="flex items-start gap-2">
                                 <span className="text-purple-500 mt-1">✓</span>
-                                <span>Trend analysis and rapid content deployment</span>
+                                <span>Perfected hook strategies for maximum engagement and retention</span>
                             </li>
                             <li className="flex items-start gap-2">
                                 <span className="text-purple-500 mt-1">✓</span>
-                                <span>Data-driven editing techniques optimized for Instagram algorithm</span>
+                                <span>Premium production quality optimized for Instagram algorithm</span>
                             </li>
                         </ul>
                     </div>
 
                     <div className="flex items-center justify-between bg-purple-900/30 border border-purple-700/30 rounded-lg p-4">
                         <div>
-                            <p className="text-2xl font-bold text-purple-400">+300K</p>
-                            <p className="text-sm text-neutral-400">Net Growth</p>
+                            <p className="text-2xl font-bold text-purple-400">3 Months</p>
+                            <p className="text-sm text-neutral-400">Timeframe</p>
                         </div>
                         <div className="text-right">
                             <p className="text-sm text-neutral-400">Platform</p>
