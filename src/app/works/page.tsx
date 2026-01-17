@@ -14,80 +14,141 @@ const timelineData = [
                     Engaging long-form content that captivates audiences and drives meaningful engagement.
                 </p>
 
-                {/* REJECTED HIRED Project */}
-                <div className="mb-8 bg-neutral-900/50 backdrop-blur-sm rounded-xl p-6 border border-neutral-800">
-                    <h3 className="text-2xl font-bold text-white mb-2">REJECTED → HIRED</h3>
-                    <p className="text-neutral-400 mb-4">A compelling narrative of perseverance and success</p>
-                    <div className="grid grid-cols-1 md:grid-cols-2 gap-4 mb-4">
-                        <a href="https://youtu.be/LT4uTGozm4s" target="_blank" rel="noopener noreferrer" className="block rounded-lg overflow-hidden group relative">
+                <div className="grid grid-cols-1 gap-6">
+                    {/* REJECTED HIRED Project */}
+                    <a
+                        href="https://youtu.be/LT4uTGozm4s"
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        className="group block bg-gradient-to-br from-neutral-900/80 to-neutral-950/80 backdrop-blur-sm rounded-2xl border border-neutral-800/50 hover:border-primary/50 overflow-hidden transition-all duration-300 hover:shadow-xl hover:shadow-primary/10"
+                    >
+                        <div className="relative aspect-video overflow-hidden">
                             <Image
                                 src="https://img.youtube.com/vi/LT4uTGozm4s/maxresdefault.jpg"
                                 alt="REJECTED vs HIRED"
-                                width={500}
-                                height={300}
-                                className="w-full h-48 object-cover transition-transform duration-300 group-hover:scale-105"
+                                width={1280}
+                                height={720}
+                                className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105"
                             />
-                            <div className="absolute inset-0 bg-black/20 group-hover:bg-black/40 transition-colors flex items-center justify-center">
-                                <div className="w-12 h-12 bg-white/20 backdrop-blur-sm rounded-full flex items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity">
-                                    <svg className="w-6 h-6 text-white fill-current" viewBox="0 0 24 24"><path d="M8 5v14l11-7z" /></svg>
+                            <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-black/20 to-transparent" />
+                            <div className="absolute inset-0 bg-black/40 group-hover:bg-black/20 transition-colors duration-300" />
+
+                            {/* Play Button */}
+                            <div className="absolute inset-0 flex items-center justify-center">
+                                <div className="w-20 h-20 rounded-full bg-primary/80 backdrop-blur-sm flex items-center justify-center transform transition-all duration-300 group-hover:scale-110 group-hover:bg-primary">
+                                    <svg className="w-8 h-8 text-white fill-current ml-1" viewBox="0 0 24 24">
+                                        <path d="M8 5v14l11-7z" />
+                                    </svg>
                                 </div>
                             </div>
-                        </a>
-                        <div className="flex flex-col justify-center">
-                            <p className="text-sm text-neutral-400 mb-2">
-                                A powerful story showcasing the journey from rejection to success,
-                                resonating with professionals worldwide.
+
+                            {/* Badge */}
+                            <div className="absolute top-4 left-4">
+                                <span className="px-3 py-1 bg-primary/90 backdrop-blur-sm text-white text-xs font-semibold rounded-full">
+                                    Featured
+                                </span>
+                            </div>
+                        </div>
+
+                        <div className="p-6">
+                            <h3 className="text-2xl font-bold text-white mb-2 group-hover:text-primary transition-colors">
+                                REJECTED → HIRED
+                            </h3>
+                            <p className="text-neutral-400 text-sm">
+                                A powerful story showcasing the journey from rejection to success, resonating with professionals worldwide.
                             </p>
                         </div>
-                    </div>
-                </div>
+                    </a>
 
-                {/* I ALMOST GOT ARRESTED Project */}
-                <div className="mb-8 bg-neutral-900/50 backdrop-blur-sm rounded-xl p-6 border border-neutral-800">
-                    <h3 className="text-2xl font-bold text-white mb-2">I ALMOST GOT ARRESTED!</h3>
-                    <p className="text-neutral-400 mb-4">Viral storytelling at its finest</p>
-                    <a href="https://youtu.be/9uFoOYpNMqM" target="_blank" rel="noopener noreferrer" className="block rounded-lg overflow-hidden mb-4 group relative">
-                        <Image
-                            src="https://img.youtube.com/vi/9uFoOYpNMqM/maxresdefault.jpg"
-                            alt="I ALMOST GOT ARRESTED!"
-                            width={800}
-                            height={400}
-                            className="w-full h-64 object-cover transition-transform duration-300 group-hover:scale-105"
-                        />
-                        <div className="absolute inset-0 bg-black/20 group-hover:bg-black/40 transition-colors flex items-center justify-center">
-                            <div className="w-16 h-16 bg-white/20 backdrop-blur-sm rounded-full flex items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity">
-                                <svg className="w-8 h-8 text-white fill-current" viewBox="0 0 24 24"><path d="M8 5v14l11-7z" /></svg>
+                    {/* I ALMOST GOT ARRESTED Project */}
+                    <a
+                        href="https://youtu.be/9uFoOYpNMqM"
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        className="group block bg-gradient-to-br from-neutral-900/80 to-neutral-950/80 backdrop-blur-sm rounded-2xl border border-neutral-800/50 hover:border-primary/50 overflow-hidden transition-all duration-300 hover:shadow-xl hover:shadow-primary/10"
+                    >
+                        <div className="relative aspect-video overflow-hidden">
+                            <Image
+                                src="https://img.youtube.com/vi/9uFoOYpNMqM/maxresdefault.jpg"
+                                alt="I ALMOST GOT ARRESTED!"
+                                width={1280}
+                                height={720}
+                                className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105"
+                            />
+                            <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-black/20 to-transparent" />
+                            <div className="absolute inset-0 bg-black/40 group-hover:bg-black/20 transition-colors duration-300" />
+
+                            {/* Play Button */}
+                            <div className="absolute inset-0 flex items-center justify-center">
+                                <div className="w-20 h-20 rounded-full bg-primary/80 backdrop-blur-sm flex items-center justify-center transform transition-all duration-300 group-hover:scale-110 group-hover:bg-primary">
+                                    <svg className="w-8 h-8 text-white fill-current ml-1" viewBox="0 0 24 24">
+                                        <path d="M8 5v14l11-7z" />
+                                    </svg>
+                                </div>
+                            </div>
+
+                            {/* Badge */}
+                            <div className="absolute top-4 left-4">
+                                <span className="px-3 py-1 bg-red-600/90 backdrop-blur-sm text-white text-xs font-semibold rounded-full">
+                                    Viral
+                                </span>
                             </div>
                         </div>
-                    </a>
-                    <p className="text-sm text-neutral-400">
-                        High-energy content that hooks viewers from the first second with
-                        dramatic pacing and compelling narrative structure.
-                    </p>
-                </div>
 
-                {/* $1M/YEAR AGENCY MODEL */}
-                <div className="bg-neutral-900/50 backdrop-blur-sm rounded-xl p-6 border border-neutral-800">
-                    <h3 className="text-2xl font-bold text-white mb-2">$1M/YEAR AGENCY MODEL</h3>
-                    <p className="text-neutral-400 mb-4">Educational content that delivers value</p>
-                    <a href="https://youtu.be/Z4XQj2Iuz98" target="_blank" rel="noopener noreferrer" className="block rounded-lg overflow-hidden mb-4 group relative">
-                        <Image
-                            src="https://img.youtube.com/vi/Z4XQj2Iuz98/maxresdefault.jpg"
-                            alt="$1M/YEAR AGENCY MODEL"
-                            width={800}
-                            height={400}
-                            className="w-full h-64 object-cover transition-transform duration-300 group-hover:scale-105"
-                        />
-                        <div className="absolute inset-0 bg-black/20 group-hover:bg-black/40 transition-colors flex items-center justify-center">
-                            <div className="w-16 h-16 bg-white/20 backdrop-blur-sm rounded-full flex items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity">
-                                <svg className="w-8 h-8 text-white fill-current" viewBox="0 0 24 24"><path d="M8 5v14l11-7z" /></svg>
-                            </div>
+                        <div className="p-6">
+                            <h3 className="text-2xl font-bold text-white mb-2 group-hover:text-primary transition-colors">
+                                I ALMOST GOT ARRESTED!
+                            </h3>
+                            <p className="text-neutral-400 text-sm">
+                                High-energy content that hooks viewers from the first second with dramatic pacing and compelling narrative structure.
+                            </p>
                         </div>
                     </a>
-                    <p className="text-sm text-neutral-400">
-                        Breaking down complex business strategies into digestible,
-                        actionable content for aspiring entrepreneurs.
-                    </p>
+
+                    {/* $1M/YEAR AGENCY MODEL */}
+                    <a
+                        href="https://youtu.be/Z4XQj2Iuz98"
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        className="group block bg-gradient-to-br from-neutral-900/80 to-neutral-950/80 backdrop-blur-sm rounded-2xl border border-neutral-800/50 hover:border-primary/50 overflow-hidden transition-all duration-300 hover:shadow-xl hover:shadow-primary/10"
+                    >
+                        <div className="relative aspect-video overflow-hidden">
+                            <Image
+                                src="https://img.youtube.com/vi/Z4XQj2Iuz98/maxresdefault.jpg"
+                                alt="$1M/YEAR AGENCY MODEL"
+                                width={1280}
+                                height={720}
+                                className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105"
+                            />
+                            <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-black/20 to-transparent" />
+                            <div className="absolute inset-0 bg-black/40 group-hover:bg-black/20 transition-colors duration-300" />
+
+                            {/* Play Button */}
+                            <div className="absolute inset-0 flex items-center justify-center">
+                                <div className="w-20 h-20 rounded-full bg-primary/80 backdrop-blur-sm flex items-center justify-center transform transition-all duration-300 group-hover:scale-110 group-hover:bg-primary">
+                                    <svg className="w-8 h-8 text-white fill-current ml-1" viewBox="0 0 24 24">
+                                        <path d="M8 5v14l11-7z" />
+                                    </svg>
+                                </div>
+                            </div>
+
+                            {/* Badge */}
+                            <div className="absolute top-4 left-4">
+                                <span className="px-3 py-1 bg-emerald-600/90 backdrop-blur-sm text-white text-xs font-semibold rounded-full">
+                                    Educational
+                                </span>
+                            </div>
+                        </div>
+
+                        <div className="p-6">
+                            <h3 className="text-2xl font-bold text-white mb-2 group-hover:text-primary transition-colors">
+                                $1M/YEAR AGENCY MODEL
+                            </h3>
+                            <p className="text-neutral-400 text-sm">
+                                Breaking down complex business strategies into digestible, actionable content for aspiring entrepreneurs.
+                            </p>
+                        </div>
+                    </a>
                 </div>
             </div>
         ),
