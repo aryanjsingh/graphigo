@@ -33,6 +33,13 @@ const AnimatedTestimonials = dynamic(() =>
 const testimonials = [
   {
     quote:
+      "Working with Graphigo was a game-changer. Our engagement has skyrocketed since we started.",
+    name: "Creator Four",
+    designation: "Brand Ambassador",
+    src: "/Creators photos/4.png",
+  },
+  {
+    quote:
       "Graphigo has completely transformed our content strategy. Their attention to detail is unmatched.",
     name: "Creator One",
     designation: "Content Creator",
@@ -51,13 +58,6 @@ const testimonials = [
     name: "Creator Three",
     designation: "Influencer",
     src: "/Creators photos/3.png",
-  },
-  {
-    quote:
-      "Working with Graphigo was a game-changer. Our engagement has skyrocketed since we started.",
-    name: "Creator Four",
-    designation: "Brand Ambassador",
-    src: "/Creators photos/4.png",
   },
   {
     quote:
