@@ -30,10 +30,6 @@ const AnimatedTestimonials = dynamic(() =>
   import("@/components/ui/animated-testimonials").then((mod) => mod.AnimatedTestimonials)
 );
 
-const CTASection = dynamic(() =>
-  import("@/components/cta-section").then((mod) => mod.default)
-);
-
 const testimonials = [
   {
     quote:
@@ -226,7 +222,6 @@ export default function Home() {
 
 
 
-
       {/* Simple Collection Section */}
       <section className="w-full bg-neutral-950">
         <SimpleCollection />
@@ -241,8 +236,8 @@ export default function Home() {
       {/* Animated Testimonials Section */}
       <AnimatedTestimonials testimonials={testimonials} />
 
-      {/* CTA Section */}
-      <CTASection />
+      {/* Features Section */}
+      <GraphigoFeatures />
 
       <Footer />
     </>
