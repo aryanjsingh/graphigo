@@ -120,7 +120,7 @@ const testimonials = [
 export default function Home() {
   return (
     <>
-      <div className="h-screen w-full rounded-md bg-neutral-950 relative flex flex-col items-center justify-center antialiased">
+      <div className="h-screen w-full rounded-md bg-background relative flex flex-col items-center justify-center antialiased">
         {/* Hero Content */}
         <div className="container mx-auto px-4 py-24 sm:py-32 relative z-10 flex-1 flex flex-col">
           <div className="mx-auto max-w-4xl text-center flex-1 flex flex-col justify-center">
@@ -223,7 +223,7 @@ export default function Home() {
 
 
       {/* Simple Collection Section */}
-      <section className="w-full bg-neutral-950">
+      <section className="w-full bg-background">
         <SimpleCollection />
       </section>
 

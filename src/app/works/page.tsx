@@ -783,7 +783,7 @@ const timelineData = [
 
 export default function WorksPage() {
     return (
-        <div className="w-full h-full bg-neutral-950 relative antialiased">
+        <div className="w-full h-full bg-background relative antialiased">
             <BackgroundBeams />
 
             {/* Header Removed as per request, added space for navbar */}

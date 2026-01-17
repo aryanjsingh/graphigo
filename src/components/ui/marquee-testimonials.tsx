@@ -41,7 +41,7 @@ const TestimonialCard = ({
                     "{testimonial.quote}"
                 </p>
             </div>
-            <div className="pointer-events-none absolute inset-0 bg-gradient-to-t from-neutral-950/20 to-transparent" />
+            <div className="pointer-events-none absolute inset-0 bg-gradient-to-t from-background/20 to-transparent" />
         </div>
     );
 };
@@ -59,7 +59,7 @@ export const MarqueeTestimonials = ({
     const secondRow = testimonials.slice(mid);
 
     return (
-        <div className={cn("relative flex h-full w-full flex-col items-center justify-center gap-12 overflow-hidden bg-neutral-950 py-24", className)}>
+        <div className={cn("relative flex h-full w-full flex-col items-center justify-center gap-12 overflow-hidden bg-background py-24", className)}>
             <div className="text-center space-y-4 mb-8">
                 <h2 className="text-4xl md:text-6xl font-bold text-white tracking-tight">
                     Beyond <span className="text-primary">founders</span> <br className="md:hidden" />
@@ -78,8 +78,8 @@ export const MarqueeTestimonials = ({
                     ))}
                 </Marquee>
             </div>
-            <div className="pointer-events-none absolute inset-y-0 left-0 w-1/4 bg-gradient-to-r from-neutral-950 dark:from-background" />
-            <div className="pointer-events-none absolute inset-y-0 right-0 w-1/4 bg-gradient-to-l from-neutral-950 dark:from-background" />
+            <div className="pointer-events-none absolute inset-y-0 left-0 w-1/4 bg-gradient-to-r from-background dark:from-background" />
+            <div className="pointer-events-none absolute inset-y-0 right-0 w-1/4 bg-gradient-to-l from-background dark:from-background" />
         </div>
     );
 };

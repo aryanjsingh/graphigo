@@ -3,7 +3,7 @@ import { Button } from "@/components/ui/button"
 
 export function Footer() {
     return (
-        <footer className="relative pt-20 pb-8 overflow-hidden bg-neutral-950">
+        <footer className="relative pt-20 pb-8 overflow-hidden bg-background">
             <div
                 className="absolute inset-0 pointer-events-none"
                 style={{
