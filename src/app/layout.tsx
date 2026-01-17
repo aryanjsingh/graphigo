@@ -3,7 +3,7 @@ import { Geist, Geist_Mono } from "next/font/google";
 import localFont from "next/font/local";
 
 import "./globals.css";
-import { Navbar } from "@/components/navbar";
+import { SiteDock } from "@/components/site-dock";
 
 const geistSans = Geist({
   variable: "--font-geist-sans",
@@ -47,7 +47,7 @@ export default function RootLayout({
       <body
         className={`${geistSans.variable} ${geistMono.variable} ${roadRage.variable} antialiased`}
       >
-        <Navbar />
+        <SiteDock />
         {children}
       </body>
     </html>

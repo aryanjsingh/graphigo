@@ -9,7 +9,7 @@ import {
 } from "./ui/animated-modal";
 import { motion } from "framer-motion";
 
-export function ContactModal({ triggerText = "Book a Call", className }: { triggerText?: string, className?: string }) {
+export function ContactModal({ triggerText = "Book a Call", className, children }: { triggerText?: string, className?: string, children?: React.ReactNode }) {
     const [formData, setFormData] = useState({
         name: "",
         email: "",
@@ -34,7 +34,7 @@ export function ContactModal({ triggerText = "Book a Call", className }: { trigg
         <div className="flex items-center justify-center">
             <Modal>
                 <ModalTrigger className={className}>
-                    {triggerText}
+                    {children || triggerText}
                 </ModalTrigger>
                 <ModalBody>
                     <ModalContent>
