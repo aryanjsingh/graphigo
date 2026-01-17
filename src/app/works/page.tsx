@@ -4,22 +4,6 @@ import Image from "next/image";
 import { Timeline } from "@/components/ui/timeline";
 import { BackgroundBeams } from "@/components/ui/background-beams";
 
-export default function WorksPage() {
-    return (
-        <div className="w-full h-full bg-neutral-950 relative antialiased">
-            <BackgroundBeams />
-
-            {/* Header Removed as per request, added space for navbar */}
-            <div className="pt-40"></div>
-
-            {/* Timeline Component */}
-            <div className="relative z-10">
-                <Timeline data={timelineData} />
-            </div>
-        </div>
-    );
-}
-
 // Timeline Data with Real Graphigo Projects
 const timelineData = [
     {
@@ -421,3 +405,19 @@ const timelineData = [
         ),
     },
 ];
+
+export default function WorksPage() {
+    return (
+        <div className="w-full h-full bg-neutral-950 relative antialiased">
+            <BackgroundBeams />
+
+            {/* Header Removed as per request, added space for navbar */}
+            <div className="pt-40"></div>
+
+            {/* Timeline Component */}
+            <div className="relative z-10">
+                <Timeline data={timelineData} />
+            </div>
+        </div>
+    );
+}
