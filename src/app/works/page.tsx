@@ -353,6 +353,67 @@ const timelineData = [
                             </p>
                         </div>
                     </a>
+
+                    {/* Superlon Brand Film */}
+                    <div className="group block bg-gradient-to-br from-neutral-900/80 to-neutral-950/80 backdrop-blur-sm rounded-2xl border border-neutral-800/50 hover:border-primary/50 overflow-hidden transition-all duration-300 hover:shadow-xl hover:shadow-primary/10">
+                        <div className="relative aspect-video overflow-hidden bg-gradient-to-br from-red-950/20 to-neutral-950">
+                            <div className="absolute inset-0 flex items-center justify-center">
+                                <div className="text-center">
+                                    <h4 className="text-6xl font-bold text-red-500/80 mb-2">Superlon</h4>
+                                    <p className="text-neutral-400 text-sm">Brand Showcase</p>
+                                </div>
+                            </div>
+                            <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-black/20 to-transparent" />
+
+                            {/* Badge */}
+                            <div className="absolute top-4 left-4">
+                                <span className="px-3 py-1 bg-amber-600/90 backdrop-blur-sm text-white text-xs font-semibold rounded-full">
+                                    Brand Film
+                                </span>
+                            </div>
+                        </div>
+
+                        <div className="p-6">
+                            <h3 className="text-2xl font-bold text-white mb-2 group-hover:text-primary transition-colors">
+                                Superlon Brand Film
+                            </h3>
+                            <p className="text-neutral-400 text-sm">
+                                Created a complete brand film showcasing their factory and office for a client presentation. Premium thermal insulation brand storytelling.
+                            </p>
+                        </div>
+                    </div>
+
+                    {/* HDFC Sky */}
+                    <div className="group block bg-gradient-to-br from-neutral-900/80 to-neutral-950/80 backdrop-blur-sm rounded-2xl border border-neutral-800/50 hover:border-primary/50 overflow-hidden transition-all duration-300 hover:shadow-xl hover:shadow-primary/10">
+                        <div className="relative aspect-video overflow-hidden bg-gradient-to-br from-blue-950/20 to-neutral-950">
+                            <div className="absolute inset-0 flex items-center justify-center">
+                                <div className="text-center">
+                                    <div className="flex items-center justify-center gap-3 mb-2">
+                                        <span className="text-4xl font-bold text-blue-500">HDFC</span>
+                                        <span className="text-4xl font-bold text-primary">SKY</span>
+                                    </div>
+                                    <p className="text-neutral-400 text-sm">Margin Trading</p>
+                                </div>
+                            </div>
+                            <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-black/20 to-transparent" />
+
+                            {/* Badge */}
+                            <div className="absolute top-4 left-4">
+                                <span className="px-3 py-1 bg-blue-600/90 backdrop-blur-sm text-white text-xs font-semibold rounded-full">
+                                    Post Production
+                                </span>
+                            </div>
+                        </div>
+
+                        <div className="p-6">
+                            <h3 className="text-2xl font-bold text-white mb-2 group-hover:text-primary transition-colors">
+                                HDFC Sky | Margin Trading
+                            </h3>
+                            <p className="text-neutral-400 text-sm">
+                                Post-production and influencer marketing collaboration with Manveer Singh. Delivered under Puretech Digital, Mumbai.
+                            </p>
+                        </div>
+                    </div>
                 </div>
             </div>
         ),
