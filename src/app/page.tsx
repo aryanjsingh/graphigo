@@ -26,8 +26,8 @@ const VideoCarousel = dynamic(() =>
 
 
 
-const AnimatedTestimonials = dynamic(() =>
-  import("@/components/ui/animated-testimonials").then((mod) => mod.AnimatedTestimonials)
+const MarqueeTestimonials = dynamic(() =>
+  import("@/components/ui/marquee-testimonials").then((mod) => mod.MarqueeTestimonials)
 );
 
 const testimonials = [
@@ -234,7 +234,7 @@ export default function Home() {
       <VideoCarousel />
 
       {/* Animated Testimonials Section */}
-      <AnimatedTestimonials testimonials={testimonials} />
+      <MarqueeTestimonials testimonials={testimonials} />
 
       {/* Features Section */}
       <GraphigoFeatures />
