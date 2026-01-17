@@ -231,6 +231,41 @@ body {
   transition-delay: 0.5s;
 }
 
-.stagger-6 {
-  transition-delay: 0.6s;
+
+/* VideoCarousel Animations & Styles */
+@font-face {
+  font-family: 'Road Rage';
+  src: url('/Road_Rage.otf') format('opentype');
+  font-weight: normal;
+  font-style: normal;
+}
+
+.font-road-rage {
+  font-family: 'Road Rage', sans-serif;
+}
+
+@keyframes scroll-left {
+  0% {
+    transform: translateX(0);
+  }
+  100% {
+    transform: translateX(-50%);
+  }
+}
+
+@keyframes scroll-right {
+  0% {
+    transform: translateX(-50%);
+  }
+  100% {
+    transform: translateX(0);
+  }
+}
+
+.animate-scroll-left {
+  animation: scroll-left 50s linear infinite;
+}
+
+.animate-scroll-right {
+  animation: scroll-right 50s linear infinite;
 }

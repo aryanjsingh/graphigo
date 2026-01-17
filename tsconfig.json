@@ -39,6 +39,7 @@
   "exclude": [
     "node_modules",
     "agency-work-page",
-    "agency-work-page (1)"
+    "agency-work-page (1)",
+    "mediaagency"
   ]
 }
