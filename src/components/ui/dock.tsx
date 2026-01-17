@@ -123,6 +123,19 @@ function Dock({
     );
 }
 
+// Internal Context for exposing Width and Hover state from DockItem
+const DockItemContext = createContext<
+    { width: MotionValue<number>; isHovered: MotionValue<number> } | undefined
+>(undefined);
+
+function useDockItem() {
+    const context = useContext(DockItemContext);
+    if (!context) {
+        throw new Error("useDockItem must be used within a DockItem");
+    }
+    return context;
+}
+
 function DockItem({ children, className }: DockItemProps) {
     const ref = useRef<HTMLDivElement>(null);
 
@@ -144,31 +157,30 @@ function DockItem({ children, className }: DockItemProps) {
     const width = useSpring(widthTransform, spring);
 
     return (
-        <motion.div
-            ref={ref}
-            style={{ width }}
-            onHoverStart={() => isHovered.set(1)}
-            onHoverEnd={() => isHovered.set(0)}
-            onFocus={() => isHovered.set(1)}
-            onBlur={() => isHovered.set(0)}
-            className={cn(
-                "relative inline-flex items-center justify-center",
-                className,
-            )}
-            tabIndex={0}
-            role="button"
-            aria-haspopup="true"
-        >
-            {Children.map(children, (child) =>
-                cloneElement(child as React.ReactElement<any>, { width, isHovered }),
-            )}
-        </motion.div>
+        <DockItemContext.Provider value={{ width, isHovered }}>
+            <motion.div
+                ref={ref}
+                style={{ width }}
+                onHoverStart={() => isHovered.set(1)}
+                onHoverEnd={() => isHovered.set(0)}
+                onFocus={() => isHovered.set(1)}
+                onBlur={() => isHovered.set(0)}
+                className={cn(
+                    "relative inline-flex items-center justify-center",
+                    className,
+                )}
+                tabIndex={0}
+                role="button"
+                aria-haspopup="true"
+            >
+                {children}
+            </motion.div>
+        </DockItemContext.Provider>
     );
 }
 
-function DockLabel({ children, className, ...rest }: DockLabelProps) {
-    const restProps = rest as Record<string, unknown>;
-    const isHovered = restProps["isHovered"] as MotionValue<number>;
+function DockLabel({ children, className }: DockLabelProps) {
+    const { isHovered } = useDockItem();
     const [isVisible, setIsVisible] = useState(false);
 
     useEffect(() => {
@@ -201,9 +213,8 @@ function DockLabel({ children, className, ...rest }: DockLabelProps) {
     );
 }
 
-function DockIcon({ children, className, ...rest }: DockIconProps) {
-    const restProps = rest as Record<string, unknown>;
-    const width = restProps["width"] as MotionValue<number>;
+function DockIcon({ children, className }: DockIconProps) {
+    const { width } = useDockItem();
 
     const widthTransform = useTransform(width, (val) => val / 2);
 
