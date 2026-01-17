@@ -35,15 +35,20 @@ const timelineData = [
                     <h3 className="text-2xl font-bold text-white mb-2">REJECTED → HIRED</h3>
                     <p className="text-neutral-400 mb-4">A compelling narrative of perseverance and success</p>
                     <div className="grid grid-cols-1 md:grid-cols-2 gap-4 mb-4">
-                        <div className="rounded-lg overflow-hidden">
+                        <a href="https://youtu.be/LT4uTGozm4s" target="_blank" rel="noopener noreferrer" className="block rounded-lg overflow-hidden group relative">
                             <Image
-                                src="https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?w=800&auto=format&fit=crop"
-                                alt="Professional journey"
+                                src="https://img.youtube.com/vi/LT4uTGozm4s/maxresdefault.jpg"
+                                alt="REJECTED vs HIRED"
                                 width={500}
                                 height={300}
-                                className="w-full h-48 object-cover"
+                                className="w-full h-48 object-cover transition-transform duration-300 group-hover:scale-105"
                             />
-                        </div>
+                            <div className="absolute inset-0 bg-black/20 group-hover:bg-black/40 transition-colors flex items-center justify-center">
+                                <div className="w-12 h-12 bg-white/20 backdrop-blur-sm rounded-full flex items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity">
+                                    <svg className="w-6 h-6 text-white fill-current" viewBox="0 0 24 24"><path d="M8 5v14l11-7z" /></svg>
+                                </div>
+                            </div>
+                        </a>
                         <div className="flex flex-col justify-center">
                             <p className="text-sm text-neutral-400 mb-2">
                                 A powerful story showcasing the journey from rejection to success,
@@ -57,15 +62,20 @@ const timelineData = [
                 <div className="mb-8 bg-neutral-900/50 backdrop-blur-sm rounded-xl p-6 border border-neutral-800">
                     <h3 className="text-2xl font-bold text-white mb-2">I ALMOST GOT ARRESTED!</h3>
                     <p className="text-neutral-400 mb-4">Viral storytelling at its finest</p>
-                    <div className="rounded-lg overflow-hidden mb-4">
+                    <a href="https://youtu.be/9uFoOYpNMqM" target="_blank" rel="noopener noreferrer" className="block rounded-lg overflow-hidden mb-4 group relative">
                         <Image
-                            src="https://images.unsplash.com/photo-1589829545856-d10d557cf95f?w=800&auto=format&fit=crop"
-                            alt="Dramatic storytelling"
+                            src="https://img.youtube.com/vi/9uFoOYpNMqM/maxresdefault.jpg"
+                            alt="I ALMOST GOT ARRESTED!"
                             width={800}
                             height={400}
-                            className="w-full h-64 object-cover"
+                            className="w-full h-64 object-cover transition-transform duration-300 group-hover:scale-105"
                         />
-                    </div>
+                        <div className="absolute inset-0 bg-black/20 group-hover:bg-black/40 transition-colors flex items-center justify-center">
+                            <div className="w-16 h-16 bg-white/20 backdrop-blur-sm rounded-full flex items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity">
+                                <svg className="w-8 h-8 text-white fill-current" viewBox="0 0 24 24"><path d="M8 5v14l11-7z" /></svg>
+                            </div>
+                        </div>
+                    </a>
                     <p className="text-sm text-neutral-400">
                         High-energy content that hooks viewers from the first second with
                         dramatic pacing and compelling narrative structure.
@@ -76,15 +86,20 @@ const timelineData = [
                 <div className="bg-neutral-900/50 backdrop-blur-sm rounded-xl p-6 border border-neutral-800">
                     <h3 className="text-2xl font-bold text-white mb-2">$1M/YEAR AGENCY MODEL</h3>
                     <p className="text-neutral-400 mb-4">Educational content that delivers value</p>
-                    <div className="rounded-lg overflow-hidden mb-4">
+                    <a href="https://youtu.be/Z4XQj2Iuz98" target="_blank" rel="noopener noreferrer" className="block rounded-lg overflow-hidden mb-4 group relative">
                         <Image
-                            src="https://images.unsplash.com/photo-1460925895917-afdab827c52f?w=800&auto=format&fit=crop"
-                            alt="Business education"
+                            src="https://img.youtube.com/vi/Z4XQj2Iuz98/maxresdefault.jpg"
+                            alt="$1M/YEAR AGENCY MODEL"
                             width={800}
                             height={400}
-                            className="w-full h-64 object-cover"
+                            className="w-full h-64 object-cover transition-transform duration-300 group-hover:scale-105"
                         />
-                    </div>
+                        <div className="absolute inset-0 bg-black/20 group-hover:bg-black/40 transition-colors flex items-center justify-center">
+                            <div className="w-16 h-16 bg-white/20 backdrop-blur-sm rounded-full flex items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity">
+                                <svg className="w-8 h-8 text-white fill-current" viewBox="0 0 24 24"><path d="M8 5v14l11-7z" /></svg>
+                            </div>
+                        </div>
+                    </a>
                     <p className="text-sm text-neutral-400">
                         Breaking down complex business strategies into digestible,
                         actionable content for aspiring entrepreneurs.
