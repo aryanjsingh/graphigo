@@ -198,7 +198,7 @@ export default function Home() {
               {/* Get started button */}
               <div className="flex items-center justify-center">
                 <a href="#features">
-                  <div className="group cursor-pointer border border-border bg-card gap-2 h-[60px] flex items-center p-[10px] rounded-full hover:shadow-xl transition-all duration-300">
+                  <div className="group cursor-pointer border border-border/50 bg-background gap-2 h-[60px] flex items-center p-[10px] rounded-full hover:shadow-xl transition-all duration-300">
                     <div className="border border-border bg-primary h-[40px] rounded-full flex items-center justify-center text-primary-foreground px-6">
                       <p className="font-medium tracking-tight flex items-center gap-2 justify-center text-base">
                         <Globe className="h-[18px] w-[18px] animate-spin" style={{ animationDuration: '3s' }} />
