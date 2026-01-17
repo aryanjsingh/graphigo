@@ -37,46 +37,48 @@ export function ContactModal({ triggerText = "Book a Call", className }: { trigg
                     {triggerText}
                 </ModalTrigger>
                 <ModalBody>
-                    <ModalContent className="overflow-y-auto">
-                        <h4 className="text-lg md:text-2xl text-neutral-600 dark:text-neutral-100 font-bold text-center mb-8">
+                    <ModalContent>
+                        <h4 className="text-lg md:text-2xl text-neutral-600 dark:text-neutral-100 font-bold text-center mb-6">
                             Book your{" "}
                             <span className="px-1 py-0.5 rounded-md bg-gray-100 dark:bg-neutral-800 dark:border-neutral-700 border border-gray-200">
                                 Service
                             </span>{" "}
                             now! 🚀
                         </h4>
-                        <form onSubmit={handleSubmit} className="space-y-6">
-                            <div className="space-y-2">
-                                <label htmlFor="name" className="text-sm font-medium text-neutral-700 dark:text-neutral-300">
-                                    Name
-                                </label>
-                                <input
-                                    type="text"
-                                    name="name"
-                                    id="name"
-                                    required
-                                    value={formData.name}
-                                    onChange={handleChange}
-                                    className="w-full px-4 py-3 rounded-lg bg-gray-50 dark:bg-neutral-900 border border-gray-200 dark:border-neutral-700 focus:ring-2 focus:ring-primary focus:outline-none transition-all"
-                                    placeholder="John Doe"
-                                />
+                        <form onSubmit={handleSubmit} className="space-y-4">
+                            <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
+                                <div className="space-y-1.5">
+                                    <label htmlFor="name" className="text-sm font-medium text-neutral-700 dark:text-neutral-300">
+                                        Name
+                                    </label>
+                                    <input
+                                        type="text"
+                                        name="name"
+                                        id="name"
+                                        required
+                                        value={formData.name}
+                                        onChange={handleChange}
+                                        className="w-full px-3 py-2 rounded-lg bg-gray-50 dark:bg-neutral-900 border border-gray-200 dark:border-neutral-700 focus:ring-2 focus:ring-primary focus:outline-none transition-all"
+                                        placeholder="John Doe"
+                                    />
+                                </div>
+                                <div className="space-y-1.5">
+                                    <label htmlFor="email" className="text-sm font-medium text-neutral-700 dark:text-neutral-300">
+                                        Email
+                                    </label>
+                                    <input
+                                        type="email"
+                                        name="email"
+                                        id="email"
+                                        required
+                                        value={formData.email}
+                                        onChange={handleChange}
+                                        className="w-full px-3 py-2 rounded-lg bg-gray-50 dark:bg-neutral-900 border border-gray-200 dark:border-neutral-700 focus:ring-2 focus:ring-primary focus:outline-none transition-all"
+                                        placeholder="john@example.com"
+                                    />
+                                </div>
                             </div>
-                            <div className="space-y-2">
-                                <label htmlFor="email" className="text-sm font-medium text-neutral-700 dark:text-neutral-300">
-                                    Email
-                                </label>
-                                <input
-                                    type="email"
-                                    name="email"
-                                    id="email"
-                                    required
-                                    value={formData.email}
-                                    onChange={handleChange}
-                                    className="w-full px-4 py-3 rounded-lg bg-gray-50 dark:bg-neutral-900 border border-gray-200 dark:border-neutral-700 focus:ring-2 focus:ring-primary focus:outline-none transition-all"
-                                    placeholder="john@example.com"
-                                />
-                            </div>
-                            <div className="space-y-2">
+                            <div className="space-y-1.5">
                                 <label htmlFor="service" className="text-sm font-medium text-neutral-700 dark:text-neutral-300">
                                     Service
                                 </label>
@@ -85,7 +87,7 @@ export function ContactModal({ triggerText = "Book a Call", className }: { trigg
                                     id="service"
                                     value={formData.service}
                                     onChange={handleChange}
-                                    className="w-full px-4 py-3 rounded-lg bg-gray-50 dark:bg-neutral-900 border border-gray-200 dark:border-neutral-700 focus:ring-2 focus:ring-primary focus:outline-none transition-all appearance-none"
+                                    className="w-full px-3 py-2 rounded-lg bg-gray-50 dark:bg-neutral-900 border border-gray-200 dark:border-neutral-700 focus:ring-2 focus:ring-primary focus:outline-none transition-all appearance-none"
                                 >
                                     <option value="Video Editing">Video Editing</option>
                                     <option value="Graphic Design">Graphic Design</option>
@@ -93,18 +95,18 @@ export function ContactModal({ triggerText = "Book a Call", className }: { trigg
                                     <option value="Other">Other</option>
                                 </select>
                             </div>
-                            <div className="space-y-2">
+                            <div className="space-y-1.5">
                                 <label htmlFor="description" className="text-sm font-medium text-neutral-700 dark:text-neutral-300">
                                     Description
                                 </label>
                                 <textarea
                                     name="description"
                                     id="description"
-                                    rows={4}
+                                    rows={3}
                                     required
                                     value={formData.description}
                                     onChange={handleChange}
-                                    className="w-full px-4 py-3 rounded-lg bg-gray-50 dark:bg-neutral-900 border border-gray-200 dark:border-neutral-700 focus:ring-2 focus:ring-primary focus:outline-none transition-all resize-none"
+                                    className="w-full px-3 py-2 rounded-lg bg-gray-50 dark:bg-neutral-900 border border-gray-200 dark:border-neutral-700 focus:ring-2 focus:ring-primary focus:outline-none transition-all resize-none"
                                     placeholder="Tell us about your project..."
                                 ></textarea>
                             </div>
