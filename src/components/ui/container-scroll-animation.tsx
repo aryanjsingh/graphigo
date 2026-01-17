@@ -63,7 +63,7 @@ export function SimpleCollection() {
             >
                 {/* Glowing gradient background */}
                 <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[120%] h-[120%] pointer-events-none">
-                    <div className="w-full h-full bg-[radial-gradient(circle_at_center,_var(--tw-gradient-stops))] from-cyan-500/40 via-cyan-500/10 to-transparent blur-[60px]" />
+                    <div className="w-full h-full bg-[radial-gradient(circle_at_center,_var(--tw-gradient-stops))] from-primary/40 via-primary/10 to-transparent blur-[60px]" />
                 </div>
 
                 {/* Fade overlays */}

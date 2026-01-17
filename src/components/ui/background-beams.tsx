@@ -72,7 +72,7 @@ export const BackgroundBeams = React.memo(
             { start: "#a855f7", mid: "#9333ea", end: "#c084fc" }, // Purple
             { start: "#ec4899", mid: "#db2777", end: "#f9a8d4" }, // Pink
             { start: "#3b82f6", mid: "#2563eb", end: "#93c5fd" }, // Blue
-            { start: "#06b6d4", mid: "#0891b2", end: "#67e8f9" }, // Cyan
+            { start: "#4c1d95", mid: "#5f3bfb", end: "#8b5cf6" }, // Violet
             { start: "#10b981", mid: "#059669", end: "#6ee7b7" }, // Green
         ];
 
