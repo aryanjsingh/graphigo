@@ -30,6 +30,10 @@ const AnimatedTestimonials = dynamic(() =>
   import("@/components/ui/animated-testimonials").then((mod) => mod.AnimatedTestimonials)
 );
 
+const CTASection = dynamic(() =>
+  import("@/components/cta-section").then((mod) => mod.default)
+);
+
 const testimonials = [
   {
     quote:
@@ -222,24 +226,23 @@ export default function Home() {
 
 
 
-      {/* Three Pillars Section */}
-      <ThreePillars />
 
       {/* Simple Collection Section */}
       <section className="w-full bg-neutral-950">
         <SimpleCollection />
       </section>
 
-
-
-      {/* Features Section */}
-      <GraphigoFeatures />
+      {/* Three Pillars Section */}
+      <ThreePillars />
 
       {/* Video Carousel Section */}
       <VideoCarousel />
 
       {/* Animated Testimonials Section */}
       <AnimatedTestimonials testimonials={testimonials} />
+
+      {/* CTA Section */}
+      <CTASection />
 
       <Footer />
     </>
