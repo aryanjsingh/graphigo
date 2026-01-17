@@ -81,7 +81,7 @@ export const Marquee = ({
             <div
                 ref={scrollerRef}
                 className={cn(
-                    "flex min-w-full shrink-0 gap-4 py-4 w-max flex-nowrap",
+                    "flex min-w-full shrink-0 gap-4 py-4 w-max flex-nowrap items-center justify-center",
                     start && "animate-marquee",
                     pauseOnHover && "hover:[animation-play-state:paused]"
                 )}
