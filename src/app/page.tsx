@@ -33,38 +33,87 @@ const AnimatedTestimonials = dynamic(() =>
 const testimonials = [
   {
     quote:
-      "The attention to detail and innovative features have completely transformed our workflow. This is exactly what we've been looking for.",
-    name: "Sarah Chen",
-    designation: "Product Manager at TechFlow",
-    src: "https://images.unsplash.com/photo-1535713875002-d1d0cf377fde?q=80&w=3560&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
+      "Graphigo has completely transformed our content strategy. Their attention to detail is unmatched.",
+    name: "Creator One",
+    designation: "Content Creator",
+    src: "/Creators photos/1.png",
   },
   {
     quote:
-      "Implementation was seamless and the results exceeded our expectations. The platform's flexibility is remarkable.",
-    name: "Michael Rodriguez",
-    designation: "CTO at InnovateSphere",
-    src: "https://images.unsplash.com/photo-1438761681033-6461ffad8d80?q=80&w=3540&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
+      "The team at Graphigo is incredibly talented. They brought our vision to life perfectly.",
+    name: "Creator Two",
+    designation: "YouTuber",
+    src: "/Creators photos/2.png",
   },
   {
     quote:
-      "This solution has significantly improved our team's productivity. The intuitive interface makes complex tasks simple.",
-    name: "Emily Watson",
-    designation: "Operations Director at CloudScale",
-    src: "https://images.unsplash.com/photo-1623582854588-d60de57fa33f?q=80&w=3540&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
+      "Professional, creative, and efficient. I highly recommend Graphigo for any video production needs.",
+    name: "Creator Three",
+    designation: "Influencer",
+    src: "/Creators photos/3.png",
   },
   {
     quote:
-      "Outstanding support and robust features. It's rare to find a product that delivers on all its promises.",
-    name: "James Kim",
-    designation: "Engineering Lead at DataPro",
-    src: "https://images.unsplash.com/photo-1636041293178-808a676cdaec?q=80&w=3552&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
+      "Working with Graphigo was a game-changer. Our engagement has skyrocketed since we started.",
+    name: "Creator Four",
+    designation: "Brand Ambassador",
+    src: "/Creators photos/4.png",
   },
   {
     quote:
-      "The scalability and performance have been game-changing for our organization. Highly recommend to any growing business.",
-    name: "Lisa Thompson",
-    designation: "VP of Technology at FutureNet",
-    src: "https://images.unsplash.com/photo-1624561172888-ac93c696e10c?q=80&w=2592&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
+      "They truly understand the nuances of social media content. The results speak for themselves.",
+    name: "Creator Five",
+    designation: "Digital Marketer",
+    src: "/Creators photos/5.png",
+  },
+  {
+    quote:
+      "I'm blown away by the quality of the edits. Graphigo is the best in the business.",
+    name: "Creator Six",
+    designation: "Vlogger",
+    src: "/Creators photos/6.png",
+  },
+  {
+    quote:
+      "Fast turnaround times and exceptional quality. Graphigo exceeded all our expectations.",
+    name: "Creator Seven",
+    designation: "Entrepreneur",
+    src: "/Creators photos/7.png",
+  },
+  {
+    quote:
+      "The storytelling in their videos is captivating. They know how to keep the audience engaged.",
+    name: "Creator Eight",
+    designation: "Storyteller",
+    src: "/Creators photos/8.png",
+  },
+  {
+    quote:
+      "Graphigo made the entire process seamless. I couldn't be happier with the final product.",
+    name: "Creator Nine",
+    designation: "Creative Director",
+    src: "/Creators photos/9.png",
+  },
+  {
+    quote:
+      "Their creativity knows no bounds. Graphigo helps us stand out in a crowded market.",
+    name: "Creator Ten",
+    designation: "Marketing Head",
+    src: "/Creators photos/10.png",
+  },
+  {
+    quote:
+      "A dedicated team that goes above and beyond. Graphigo is a partner you can trust.",
+    name: "Creator Eleven",
+    designation: "Business Owner",
+    src: "/Creators photos/13.png",
+  },
+  {
+    quote:
+      "Start-to-finish excellence. Graphigo is simply the best choice for video content.",
+    name: "Dev",
+    designation: "Developer",
+    src: "/Creators photos/dev .png",
   },
 ];
 
