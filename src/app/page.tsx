@@ -2,6 +2,7 @@
 import React from "react";
 import dynamic from "next/dynamic";
 import { BackgroundBeams } from "@/components/ui/background-beams";
+import { Ripple } from "@/components/ui/ripple";
 import { motion } from "framer-motion";
 import { Sparkles, Globe, ArrowRight } from "lucide-react";
 import { TextLoop } from "@/components/core/text-loop";
@@ -217,7 +218,7 @@ export default function Home() {
         <div className="absolute bottom-4 left-0 right-0 z-20">
           <LogoStrip />
         </div>
-        <BackgroundBeams />
+        <Ripple />
       </div>
 
 
