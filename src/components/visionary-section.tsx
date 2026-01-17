@@ -41,7 +41,7 @@ export function VisionarySection() {
                             className="w-full h-full object-cover opacity-90 group-hover:scale-105 transition-transform duration-700"
                             src="/bhavik.jpg"
                         />
-                        <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-transparent to-transparent"></div>
+                        <div className="absolute inset-0 bg-gradient-to-t from-background/80 via-transparent to-transparent"></div>
                         <div className="absolute bottom-6 left-6 lg:hidden">
                             <h3 className="text-2xl font-bold text-white">Bhavik Dattani</h3>
                             <p className="text-[#00E0C6] text-sm font-medium">Founder & CEO</p>

@@ -67,8 +67,8 @@ export function SimpleCollection() {
                 </div>
 
                 {/* Fade overlays */}
-                <div className="absolute left-0 top-0 bottom-0 w-48 z-10 pointer-events-none bg-gradient-to-r from-neutral-950 to-transparent" />
-                <div className="absolute right-0 top-0 bottom-0 w-48 z-10 pointer-events-none bg-gradient-to-l from-neutral-950 to-transparent" />
+                <div className="absolute left-0 top-0 bottom-0 w-48 z-10 pointer-events-none bg-gradient-to-r from-background to-transparent" />
+                <div className="absolute right-0 top-0 bottom-0 w-48 z-10 pointer-events-none bg-gradient-to-l from-background to-transparent" />
 
                 {/* Tilted carousel track */}
                 <div

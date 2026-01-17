@@ -19,7 +19,7 @@ const TestimonialCard = ({
     return (
         <div
             className={cn(
-                "relative h-full w-[350px] max-w-full overflow-hidden rounded-2xl border border-neutral-800 bg-neutral-950 p-6 shadow-xl",
+                "relative h-full w-[350px] max-w-full overflow-hidden rounded-2xl border border-neutral-800 bg-background p-6 shadow-xl",
                 "flex flex-col justify-between"
             )}
         >

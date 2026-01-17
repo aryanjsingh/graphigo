@@ -25,8 +25,8 @@ export function LogoStrip() {
         <section className="py-4 px-4 relative">
             <div className="w-full mx-auto overflow-hidden relative">
                 {/* Fade Gradients */}
-                <div className="absolute left-0 top-0 bottom-0 w-32 bg-gradient-to-r from-neutral-950 to-transparent z-10" />
-                <div className="absolute right-0 top-0 bottom-0 w-32 bg-gradient-to-l from-neutral-950 to-transparent z-10" />
+                <div className="absolute left-0 top-0 bottom-0 w-32 bg-gradient-to-r from-background to-transparent z-10" />
+                <div className="absolute right-0 top-0 bottom-0 w-32 bg-gradient-to-l from-background to-transparent z-10" />
 
                 <div className="flex gap-16 md:gap-24 animate-marquee whitespace-nowrap items-center">
                     {[...logos, ...logos].map((logo, i) => {
