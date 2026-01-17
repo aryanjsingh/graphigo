@@ -74,14 +74,14 @@ export const Marquee = ({
         <div
             ref={containerRef}
             className={cn(
-                "scroller relative z-20 max-w-7xl overflow-hidden  [mask-image:linear-gradient(to_right,transparent,white_20%,white_80%,transparent)]",
+                "scroller relative z-20 w-full overflow-hidden  [mask-image:linear-gradient(to_right,transparent,white_20%,white_80%,transparent)]",
                 className
             )}
         >
             <div
                 ref={scrollerRef}
                 className={cn(
-                    "flex min-w-full shrink-0 gap-4 py-4 w-max flex-nowrap items-center justify-center",
+                    "flex min-w-full shrink-0 gap-4 py-4 w-max flex-nowrap",
                     start && "animate-marquee",
                     pauseOnHover && "hover:[animation-play-state:paused]"
                 )}
