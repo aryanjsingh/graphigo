@@ -19,12 +19,12 @@ const TestimonialCard = ({
     return (
         <div
             className={cn(
-                "relative h-full w-[350px] max-w-full overflow-hidden rounded-2xl border border-white/10 bg-neutral-900/40 backdrop-blur-3xl p-6 shadow-2xl",
+                "relative h-full w-[350px] max-w-full overflow-hidden rounded-2xl border border-white/10 bg-neutral-900/20 backdrop-blur-2xl p-6 shadow-xl",
                 "flex flex-col justify-between group"
             )}
         >
             <div className="absolute inset-x-0 top-0 h-px bg-gradient-to-r from-transparent via-primary/30 to-transparent" />
-            <div className="absolute inset-x-0 top-0 h-32 bg-gradient-to-b from-primary/5 to-transparent pointer-events-none" />
+            <div className="absolute inset-x-0 top-0 h-24 bg-gradient-to-b from-primary/5 to-transparent pointer-events-none opacity-0 group-hover:opacity-100 transition-opacity duration-500" />
             <div className="flex flex-col gap-4">
                 <div className="flex flex-row items-center gap-4">
                     <div className="relative h-12 w-12 shrink-0 overflow-hidden rounded-full border border-neutral-700">
@@ -43,6 +43,7 @@ const TestimonialCard = ({
                     "{testimonial.quote}"
                 </p>
             </div>
+            <div className="pointer-events-none absolute inset-0 bg-gradient-to-t from-background/20 to-transparent" />
         </div>
     );
 };
@@ -60,13 +61,7 @@ export const MarqueeTestimonials = ({
     const secondRow = testimonials.slice(mid);
 
     return (
-        <div
-            className={cn("relative flex h-full w-full flex-col items-center justify-center gap-12 overflow-hidden bg-transparent py-24", className)}
-            style={{
-                maskImage: 'linear-gradient(to right, transparent, black 10%, black 90%, transparent)',
-                WebkitMaskImage: 'linear-gradient(to right, transparent, black 10%, black 90%, transparent)'
-            }}
-        >
+        <div className={cn("relative flex h-full w-full flex-col items-center justify-center gap-12 overflow-hidden bg-background py-24", className)}>
             <div className="text-center space-y-4 mb-8">
                 <h2 className="text-4xl md:text-6xl font-bold text-white tracking-tight">
                     Beyond <span className="text-primary">founders</span> <br className="md:hidden" />
@@ -85,6 +80,8 @@ export const MarqueeTestimonials = ({
                     ))}
                 </Marquee>
             </div>
+            <div className="pointer-events-none absolute inset-y-0 left-0 w-1/4 bg-gradient-to-r from-background dark:from-background" />
+            <div className="pointer-events-none absolute inset-y-0 right-0 w-1/4 bg-gradient-to-l from-background dark:from-background" />
         </div>
     );
 };

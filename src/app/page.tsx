@@ -17,9 +17,6 @@ const ThreePillars = dynamic(() =>
 const GraphigoFeatures = dynamic(() =>
   import("@/components/graphigo-features").then((mod) => mod.GraphigoFeatures)
 );
-const ShaderBackground = dynamic(() =>
-  import("@/components/ui/shader-background").then((mod) => mod.ShaderBackground)
-);
 
 
 const VideoCarousel = dynamic(() =>
@@ -212,23 +209,19 @@ export default function Home() {
         <SimpleCollection />
       </section>
 
-      <div className="relative w-full">
-        <ShaderBackground />
+      {/* Three Pillars Section */}
+      <ThreePillars />
 
-        {/* Three Pillars Section */}
-        <ThreePillars />
+      {/* Video Carousel Section */}
+      <VideoCarousel />
 
-        {/* Video Carousel Section */}
-        <VideoCarousel />
+      {/* Animated Testimonials Section */}
+      <MarqueeTestimonials testimonials={testimonials} />
 
-        {/* Animated Testimonials Section */}
-        <MarqueeTestimonials testimonials={testimonials} />
+      {/* Features Section */}
+      <GraphigoFeatures />
 
-        {/* Features Section */}
-        <GraphigoFeatures />
-
-        <Footer />
-      </div>
+      <Footer />
     </>
   );
 }

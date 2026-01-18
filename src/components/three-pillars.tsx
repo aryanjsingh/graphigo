@@ -22,7 +22,7 @@ export function ThreePillars() {
     ]
 
     return (
-        <section className="w-full py-24 bg-transparent">
+        <section className="w-full py-24 bg-background">
             <div className="container mx-auto px-4">
                 <div className="max-w-7xl mx-auto">
                     <motion.h2

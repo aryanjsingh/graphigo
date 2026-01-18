@@ -26,7 +26,7 @@ export default function VideoCarousel() {
     const duplicatedLayer2 = [...layer2Videos, ...layer2Videos, ...layer2Videos];
 
     return (
-        <section className="relative w-full py-24 bg-transparent overflow-hidden">
+        <section className="relative w-full py-24 bg-background overflow-hidden">
             <div className="max-w-7xl mx-auto px-6">
 
                 {/* Header */}
