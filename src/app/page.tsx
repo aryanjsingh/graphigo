@@ -17,6 +17,9 @@ const ThreePillars = dynamic(() =>
 const GraphigoFeatures = dynamic(() =>
   import("@/components/graphigo-features").then((mod) => mod.GraphigoFeatures)
 );
+const ShaderBackground = dynamic(() =>
+  import("@/components/ui/shader-background").then((mod) => mod.ShaderBackground)
+);
 
 
 const VideoCarousel = dynamic(() =>
@@ -144,12 +147,15 @@ export default function Home() {
               className="mb-8"
             >
               <h1 className="text-4xl font-public-sans font-bold tracking-tighter text-foreground sm:text-6xl lg:text-7xl max-w-5xl mx-auto leading-tight">
-                Strategic Post-Production <br /> Built for{" "}
-                <TextLoop className="text-primary font-bold italic">
-                  <span>Positioning</span>
-                  <span>Distribution</span>
-                  <span>Scalability</span>
-                </TextLoop>
+                Strategic Post-Production <br />
+                <span className="pl-16 inline-block">
+                  Built for{" "}
+                  <TextLoop className="text-primary font-bold italic w-[10ch] inline-block text-left">
+                    <span>Positioning</span>
+                    <span>Distribution</span>
+                    <span>Scalability</span>
+                  </TextLoop>
+                </span>
               </h1>
             </motion.div>
 
@@ -206,19 +212,23 @@ export default function Home() {
         <SimpleCollection />
       </section>
 
-      {/* Three Pillars Section */}
-      <ThreePillars />
+      <div className="relative w-full">
+        <ShaderBackground />
 
-      {/* Video Carousel Section */}
-      <VideoCarousel />
+        {/* Three Pillars Section */}
+        <ThreePillars />
 
-      {/* Animated Testimonials Section */}
-      <MarqueeTestimonials testimonials={testimonials} />
+        {/* Video Carousel Section */}
+        <VideoCarousel />
 
-      {/* Features Section */}
-      <GraphigoFeatures />
+        {/* Animated Testimonials Section */}
+        <MarqueeTestimonials testimonials={testimonials} />
 
-      <Footer />
+        {/* Features Section */}
+        <GraphigoFeatures />
+
+        <Footer />
+      </div>
     </>
   );
 }

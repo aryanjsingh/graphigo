@@ -26,7 +26,7 @@ export default function VideoCarousel() {
     const duplicatedLayer2 = [...layer2Videos, ...layer2Videos, ...layer2Videos];
 
     return (
-        <section className="relative w-full py-24 bg-background overflow-hidden">
+        <section className="relative w-full py-24 bg-transparent overflow-hidden">
             <div className="max-w-7xl mx-auto px-6">
 
                 {/* Header */}
@@ -43,7 +43,9 @@ export default function VideoCarousel() {
                             style={{ width: '400px' }}
                         >
                             {/* 16:9 Aspect Ratio Container */}
-                            <a href={item.url} target="_blank" rel="noopener noreferrer" className="relative w-full aspect-video rounded-xl overflow-hidden shadow-lg hover:shadow-xl transition-all hover:scale-105 block border border-white/10">
+                            <a href={item.url} target="_blank" rel="noopener noreferrer" className="relative w-full aspect-video rounded-xl overflow-hidden shadow-lg hover:shadow-xl transition-all hover:scale-105 block border border-white/10 group">
+                                <div className="absolute inset-x-0 top-0 h-px bg-gradient-to-r from-transparent via-primary/30 to-transparent z-10" />
+                                <div className="absolute inset-x-0 top-0 h-24 bg-gradient-to-b from-primary/5 to-transparent pointer-events-none opacity-0 group-hover:opacity-100 transition-opacity duration-500 z-10" />
                                 {/* YouTube Thumbnail */}
                                 <img
                                     src={`https://img.youtube.com/vi/${item.videoId}/maxresdefault.jpg`}
@@ -78,7 +80,9 @@ export default function VideoCarousel() {
                             style={{ width: '400px' }}
                         >
                             {/* 16:9 Aspect Ratio Container */}
-                            <a href={item.url} target="_blank" rel="noopener noreferrer" className="relative w-full aspect-video rounded-xl overflow-hidden shadow-lg hover:shadow-xl transition-all hover:scale-105 block border border-white/10">
+                            <a href={item.url} target="_blank" rel="noopener noreferrer" className="relative w-full aspect-video rounded-xl overflow-hidden shadow-lg hover:shadow-xl transition-all hover:scale-105 block border border-white/10 group">
+                                <div className="absolute inset-x-0 top-0 h-px bg-gradient-to-r from-transparent via-primary/30 to-transparent z-10" />
+                                <div className="absolute inset-x-0 top-0 h-24 bg-gradient-to-b from-primary/5 to-transparent pointer-events-none opacity-0 group-hover:opacity-100 transition-opacity duration-500 z-10" />
                                 {/* YouTube Thumbnail */}
                                 <img
                                     src={`https://img.youtube.com/vi/${item.videoId}/maxresdefault.jpg`}

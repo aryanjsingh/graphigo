@@ -77,13 +77,15 @@ export function SimpleCollection() {
                             {Array(2).fill(images).flat().map((src, index) => (
                                 <div
                                     key={index}
-                                    className="flex-shrink-0 overflow-hidden shadow-2xl rounded-2xl border border-white/10 bg-neutral-900/20"
+                                    className="relative flex-shrink-0 overflow-hidden shadow-2xl rounded-2xl border border-white/10 bg-neutral-900/20 group"
                                     style={{
                                         width: "280px",
                                         height: "420px",
                                         transform: `translateZ(${Math.sin(index * 0.5) * 20}px)`,
                                     }}
                                 >
+                                    <div className="absolute inset-x-0 top-0 h-px bg-gradient-to-r from-transparent via-primary/30 to-transparent z-20" />
+                                    <div className="absolute inset-x-0 top-0 h-24 bg-gradient-to-b from-primary/5 to-transparent pointer-events-none opacity-0 group-hover:opacity-100 transition-opacity duration-500 z-20" />
                                     {src.endsWith('.mp4') ? (
                                         <LazyVideo
                                             src={src}

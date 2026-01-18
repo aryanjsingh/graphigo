@@ -22,7 +22,7 @@ export function ThreePillars() {
     ]
 
     return (
-        <section className="w-full py-24 bg-background">
+        <section className="w-full py-24 bg-transparent">
             <div className="container mx-auto px-4">
                 <div className="max-w-7xl mx-auto">
                     <motion.h2
@@ -40,12 +40,14 @@ export function ThreePillars() {
                     {pillars.map((pillar, index) => (
                         <motion.div
                             key={index}
-                            className="bg-neutral-900/20 backdrop-blur-3xl border rounded-2xl p-8"
+                            className="relative bg-neutral-900/20 backdrop-blur-3xl border border-white/10 shadow-[0_8px_32px_0_rgba(255,255,255,0.05)] rounded-2xl p-8 overflow-hidden group"
                             initial={{ opacity: 0, y: 30 }}
                             whileInView={{ opacity: 1, y: 0 }}
                             viewport={{ once: true }}
                             transition={{ duration: 0.6, delay: index * 0.1 }}
                         >
+                            <div className="absolute inset-x-0 top-0 h-px bg-gradient-to-r from-transparent via-primary/30 to-transparent" />
+                            <div className="absolute inset-x-0 top-0 h-24 bg-gradient-to-b from-primary/5 to-transparent pointer-events-none opacity-0 group-hover:opacity-100 transition-opacity duration-500" />
                             <h3 className="text-3xl md:text-4xl font-public-sans font-bold text-white mb-4">
                                 {pillar.title}
                             </h3>

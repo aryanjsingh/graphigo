@@ -71,8 +71,10 @@ export function GraphigoFeatures() {
     ]
 
     return (
-        <section className="py-20 px-4 bg-background">
-            <div className="max-w-6xl mx-auto border border-white/10 bg-neutral-900/10 backdrop-blur-3xl rounded-3xl p-12 shadow-2xl">
+        <section className="py-20 px-4 bg-transparent">
+            <div className="relative max-w-6xl mx-auto border border-white/10 bg-neutral-900/10 backdrop-blur-3xl rounded-3xl p-12 shadow-2xl overflow-hidden">
+                <div className="absolute inset-x-0 top-0 h-px bg-gradient-to-r from-transparent via-primary/30 to-transparent" />
+                <div className="absolute inset-x-0 top-0 h-32 bg-gradient-to-b from-primary/5 to-transparent pointer-events-none" />
                 {/* Header */}
                 <div className="text-center mb-16">
                     <p className="text-sm text-gray-400 mb-4 tracking-wide">Features</p>
