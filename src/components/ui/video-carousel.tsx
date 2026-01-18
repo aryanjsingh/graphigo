@@ -43,7 +43,7 @@ export default function VideoCarousel() {
                             style={{ width: '400px' }}
                         >
                             {/* 16:9 Aspect Ratio Container */}
-                            <a href={item.url} target="_blank" rel="noopener noreferrer" className="relative w-full aspect-video rounded-xl overflow-hidden shadow-lg hover:shadow-xl transition-all hover:scale-105 block">
+                            <a href={item.url} target="_blank" rel="noopener noreferrer" className="relative w-full aspect-video rounded-xl overflow-hidden shadow-lg hover:shadow-xl transition-all hover:scale-105 block border border-white/10">
                                 {/* YouTube Thumbnail */}
                                 <img
                                     src={`https://img.youtube.com/vi/${item.videoId}/maxresdefault.jpg`}
@@ -78,7 +78,7 @@ export default function VideoCarousel() {
                             style={{ width: '400px' }}
                         >
                             {/* 16:9 Aspect Ratio Container */}
-                            <a href={item.url} target="_blank" rel="noopener noreferrer" className="relative w-full aspect-video rounded-xl overflow-hidden shadow-lg hover:shadow-xl transition-all hover:scale-105 block">
+                            <a href={item.url} target="_blank" rel="noopener noreferrer" className="relative w-full aspect-video rounded-xl overflow-hidden shadow-lg hover:shadow-xl transition-all hover:scale-105 block border border-white/10">
                                 {/* YouTube Thumbnail */}
                                 <img
                                     src={`https://img.youtube.com/vi/${item.videoId}/maxresdefault.jpg`}

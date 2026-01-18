@@ -4,6 +4,7 @@ import { useState } from "react";
 import Link from "next/link";
 import { cn } from "@/lib/utils";
 import { ContactModal } from "./contact-modal";
+import { motion } from "framer-motion";
 
 export function Navbar() {
     const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
@@ -11,53 +12,67 @@ export function Navbar() {
     return (
         <>
             {/* Desktop Header */}
-            <header className="fixed top-0 inset-x-0 z-[5000] w-full bg-background/50 backdrop-blur-sm hidden md:block transition-all duration-300">
-                <div className="max-w-[1400px] mx-auto px-10 py-6">
+            <header className="absolute top-0 inset-x-0 z-[5000] w-full bg-transparent hidden md:block transition-all duration-300">
+                <div className="max-w-[1400px] mx-auto px-10 py-4">
                     <div className="flex items-center justify-between">
                         {/* Logo */}
                         <Link href="/" className="flex items-center">
-                            <img src="/logo.png" alt="Graphigo" className="h-14 w-auto object-contain" />
+                            <motion.img
+                                initial={{ opacity: 0, x: -20, filter: "blur(10px)" }}
+                                animate={{ opacity: 1, x: 0, filter: "blur(0px)" }}
+                                transition={{ duration: 0.5, delay: 0.5 }}
+                                src="/logo.png"
+                                alt="Graphigo"
+                                className="h-16 w-auto object-contain"
+                            />
                         </Link>
 
                         {/* Navigation Links */}
                         <nav className="flex items-center space-x-28">
-                            <Link
-                                href="/"
-                                className="text-base font-medium text-muted-foreground hover:text-foreground transition-colors"
-                            >
-                                Home
-                            </Link>
-                            <Link
-                                href="/works"
-                                className="text-base font-medium text-muted-foreground hover:text-foreground transition-colors"
-                            >
-                                Work
-                            </Link>
-                            <Link
-                                href="/about"
-                                className="text-base font-medium text-muted-foreground hover:text-foreground transition-colors"
-                            >
-                                About
-                            </Link>
-                            <Link
-                                href="/career"
-                                className="text-base font-medium text-muted-foreground hover:text-foreground transition-colors"
-                            >
-                                Career
-                            </Link>
+                            {[
+                                { href: "/", label: "Home", delay: 0.6 },
+                                { href: "/works", label: "Work", delay: 0.7 },
+                                { href: "/about", label: "About", delay: 0.8 },
+                                { href: "/career", label: "Career", delay: 0.9 },
+                            ].map((link) => (
+                                <motion.div
+                                    key={link.label}
+                                    initial={{ opacity: 0, x: -20, filter: "blur(10px)" }}
+                                    animate={{ opacity: 1, x: 0, filter: "blur(0px)" }}
+                                    transition={{ duration: 0.5, delay: link.delay }}
+                                >
+                                    <Link
+                                        href={link.href}
+                                        className="text-base font-medium text-muted-foreground hover:text-foreground transition-colors"
+                                    >
+                                        {link.label}
+                                    </Link>
+                                </motion.div>
+                            ))}
                         </nav>
 
                         {/* CTA Button */}
-                        <ContactModal
-                            triggerText="GET IN TOUCH"
-                            className="px-8 py-2.5 text-base italic font-black tracking-wide bg-transparent border border-white/20 text-foreground rounded-full hover:bg-white/10 transition-all"
-                        />
+                        <motion.div
+                            initial={{ opacity: 0, x: -20, filter: "blur(10px)" }}
+                            animate={{ opacity: 1, x: 0, filter: "blur(0px)" }}
+                            transition={{ duration: 0.5, delay: 1.0 }}
+                        >
+                            <ContactModal
+                                triggerText=""
+                                className="relative inline-flex h-12 overflow-hidden rounded-full p-[1px] focus:outline-none focus:ring-2 focus:ring-slate-400 focus:ring-offset-2 focus:ring-offset-slate-50"
+                            >
+                                <span className="absolute inset-[-1000%] animate-[spin_2s_linear_infinite] bg-[conic-gradient(from_90deg_at_50%_50%,#00000000_0%,#04D1CD_50%,#00000000_100%)]" />
+                                <span className="inline-flex h-full w-full cursor-pointer items-center justify-center rounded-full bg-background px-8 py-1 text-sm font-medium text-white backdrop-blur-3xl italic tracking-wide">
+                                    GET IN TOUCH
+                                </span>
+                            </ContactModal>
+                        </motion.div>
                     </div>
                 </div>
             </header>
 
             {/* Mobile Header */}
-            <header className="fixed top-0 inset-x-0 z-[5000] w-full bg-background border-b border-border/10 md:hidden">
+            <header className="absolute top-0 inset-x-0 z-[5000] w-full bg-background border-b border-border/10 md:hidden">
                 <div className="px-4 py-3">
                     <div className="flex items-center justify-between">
                         <Link href="/" className="flex items-center">

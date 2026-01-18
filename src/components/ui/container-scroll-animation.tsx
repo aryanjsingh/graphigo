@@ -18,11 +18,7 @@ const images = [
 export function SimpleCollection() {
     return (
         <section className="py-24 overflow-hidden">
-            <div className="flex justify-center mb-12">
-                <span className="px-6 py-2 rounded-full border border-neutral-700 text-neutral-300 text-sm">
-                    Simple Collection
-                </span>
-            </div>
+
 
             <style jsx>{`
         @keyframes scroll-left {
@@ -81,7 +77,7 @@ export function SimpleCollection() {
                             {Array(2).fill(images).flat().map((src, index) => (
                                 <div
                                     key={index}
-                                    className="flex-shrink-0 overflow-hidden shadow-2xl"
+                                    className="flex-shrink-0 overflow-hidden shadow-2xl rounded-2xl border border-white/10 bg-neutral-900/20"
                                     style={{
                                         width: "280px",
                                         height: "420px",

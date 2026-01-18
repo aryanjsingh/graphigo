@@ -1,124 +1,92 @@
 import Link from "next/link"
 import { Button } from "@/components/ui/button"
+import { Input } from "@/components/ui/input"
 
 export function Footer() {
     return (
-        <footer className="relative pt-20 pb-8 overflow-hidden bg-primary text-primary-foreground">
-            <div
-                className="absolute inset-0 pointer-events-none"
-                style={{
-                    background: `linear-gradient(to bottom, 
-            transparent 0%, 
-            rgba(0, 0, 0, 0.2) 100%
-          )`,
-                }}
-            />
+        <footer className="relative w-full border-t border-white/10 bg-neutral-900/20 backdrop-blur-3xl pt-20 pb-10 overflow-hidden">
+            <div className="container mx-auto px-6">
+                <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 lg:gap-24 mb-16">
+                    {/* Left Column: Brand & Newsletter */}
+                    <div className="flex flex-col gap-8">
+                        <div>
+                            <Link href="/" className="flex items-center gap-2 mb-4">
+                                <img src="/logo.png" alt="Graphigo" className="h-10 w-auto" />
+                                <span className="font-bold text-2xl text-white tracking-tight">Graphigo</span>
+                            </Link>
+                            <p className="text-muted-foreground text-lg leading-relaxed max-w-md">
+                                Strategic post-production that helps brands dominate digital spaces.
+                                Built for positioning, distribution, and scalability.
+                            </p>
+                        </div>
 
-
-
-            <div className="relative mx-auto max-w-7xl px-6">
-                <div className="flex justify-center mb-16">
-                    <div className="text-center">
-
-                        <span
-                            className="text-white text-7xl md:text-8xl lg:text-9xl font-bold italic"
-                            style={{ fontFamily: "system-ui, -apple-system, sans-serif" }}
-                        >
-                            Graphigo
-                        </span>
+                        <div className="flex flex-col gap-4">
+                            <h3 className="text-white font-semibold text-lg">Stay updated</h3>
+                            <div className="flex gap-2 max-w-md">
+                                <Input
+                                    type="email"
+                                    placeholder="Enter your email"
+                                    className="bg-white/5 border-white/10 text-white placeholder:text-neutral-500 focus-visible:ring-primary/50"
+                                />
+                                <Button className="bg-primary text-white hover:bg-primary/90">
+                                    Subscribe
+                                </Button>
+                            </div>
+                        </div>
                     </div>
-                </div>
 
-                <div className="flex justify-center pb-12">
-                    <div className="grid grid-cols-1 sm:grid-cols-3 gap-12 text-center sm:text-left">
-                        {/* Navigate Column */}
-                        <div>
-                            <h3 className="text-primary-foreground font-semibold text-lg mb-6">Navigate</h3>
-                            <ul className="space-y-3">
-                                <li>
-                                    <Link href="#" className="text-gray-400 hover:text-white transition-colors">
-                                        Home
-                                    </Link>
-                                </li>
-                                <li>
-                                    <Link href="#" className="text-gray-400 hover:text-white transition-colors">
-                                        Services
-                                    </Link>
-                                </li>
-                                <li>
-                                    <Link href="#" className="text-gray-400 hover:text-white transition-colors">
-                                        Work
-                                    </Link>
-                                </li>
-                                <li>
-                                    <Link href="#" className="text-primary-foreground/70 hover:text-primary-foreground transition-colors">
-                                        Creators
-                                    </Link>
-                                </li>
-                                <li>
-                                    <Link href="#" className="text-primary-foreground/70 hover:text-primary-foreground transition-colors">
-                                        FAQs
-                                    </Link>
-                                </li>
+                    {/* Right Column: Links Grid */}
+                    <div className="grid grid-cols-2 md:grid-cols-3 gap-8">
+                        {/* Navigate */}
+                        <div className="flex flex-col gap-4">
+                            <h3 className="font-semibold text-white">Navigate</h3>
+                            <ul className="flex flex-col gap-3">
+                                <li><Link href="/" className="text-muted-foreground hover:text-primary transition-colors">Home</Link></li>
+                                <li><Link href="/works" className="text-muted-foreground hover:text-primary transition-colors">Work</Link></li>
+                                <li><Link href="/about" className="text-muted-foreground hover:text-primary transition-colors">About</Link></li>
+                                <li><Link href="/services" className="text-muted-foreground hover:text-primary transition-colors">Services</Link></li>
+                                <li><Link href="/career" className="text-muted-foreground hover:text-primary transition-colors">Career</Link></li>
                             </ul>
                         </div>
 
-                        {/* Get in touch Column */}
-                        <div>
-                            <h3 className="text-primary-foreground font-semibold text-lg mb-6">Get in touch</h3>
-                            <ul className="space-y-3">
-                                <li>
-                                    <Link href="#" className="text-primary-foreground/70 hover:text-primary-foreground transition-colors">
-                                        Email
-                                    </Link>
-                                </li>
-                                <li>
-                                    <Link href="#" className="text-primary-foreground/70 hover:text-primary-foreground transition-colors">
-                                        Instagram
-                                    </Link>
-                                </li>
-                                <li>
-                                    <Link href="#" className="text-primary-foreground/70 hover:text-primary-foreground transition-colors">
-                                        Youtube
-                                    </Link>
-                                </li>
-                                <li>
-                                    <Link href="#" className="text-primary-foreground/70 hover:text-primary-foreground transition-colors">
-                                        LinkedIn
-                                    </Link>
-                                </li>
+                        {/* Contact */}
+                        <div className="flex flex-col gap-4">
+                            <h3 className="font-semibold text-white">Get in touch</h3>
+                            <ul className="flex flex-col gap-3">
+                                <li><Link href="#" className="text-muted-foreground hover:text-primary transition-colors">Email</Link></li>
+                                <li><Link href="#" className="text-muted-foreground hover:text-primary transition-colors">Instagram</Link></li>
+                                <li><Link href="#" className="text-muted-foreground hover:text-primary transition-colors">YouTube</Link></li>
+                                <li><Link href="#" className="text-muted-foreground hover:text-primary transition-colors">LinkedIn</Link></li>
                             </ul>
                         </div>
 
-                        {/* Useful Links Column */}
-                        <div>
-                            <h3 className="text-primary-foreground font-semibold text-lg mb-6">Useful Links</h3>
-                            <ul className="space-y-3">
-                                <li>
-                                    <Link href="#" className="text-primary-foreground/70 hover:text-primary-foreground transition-colors">
-                                        Terms & Conditions
-                                    </Link>
-                                </li>
-                                <li>
-                                    <Link href="#" className="text-primary-foreground/70 hover:text-primary-foreground transition-colors">
-                                        Privacy Policy
-                                    </Link>
-                                </li>
-                                <li>
-                                    <Link href="#" className="text-primary-foreground/70 hover:text-primary-foreground transition-colors">
-                                        Refund & Cancellation
-                                    </Link>
-                                </li>
+                        {/* Legal/Useful */}
+                        <div className="flex flex-col gap-4">
+                            <h3 className="font-semibold text-white">Useful Links</h3>
+                            <ul className="flex flex-col gap-3">
+                                <li><Link href="#" className="text-muted-foreground hover:text-primary transition-colors">Privacy Policy</Link></li>
+                                <li><Link href="#" className="text-muted-foreground hover:text-primary transition-colors">Terms of Service</Link></li>
+                                <li><Link href="#" className="text-muted-foreground hover:text-primary transition-colors">Cookie Policy</Link></li>
                             </ul>
                         </div>
                     </div>
                 </div>
 
-                <div className="flex flex-col sm:flex-row items-center justify-between gap-4 pt-8 border-t border-primary-foreground/20">
-                    <p className="text-primary-foreground/70 text-sm">©Graphigo 2025. All rights reserved</p>
-                    <p className="text-primary-foreground/70 text-sm">Crafted with passion</p>
+                {/* Bottom Bar */}
+                <div className="border-t border-white/10 pt-8 flex flex-col md:flex-row justify-between items-center gap-4">
+                    <p className="text-sm text-muted-foreground">
+                        &copy; {new Date().getFullYear()} Graphigo. All rights reserved.
+                    </p>
+                    <div className="flex items-center gap-6">
+                        <p className="text-sm text-muted-foreground">Crafted with passion</p>
+                    </div>
                 </div>
             </div>
+
+            {/* Background Gradient Mesh */}
+            <div className="absolute top-0 left-0 w-full h-px bg-gradient-to-r from-transparent via-primary/50 to-transparent" />
+            <div className="absolute -bottom-24 -left-24 w-96 h-96 bg-primary/20 rounded-full blur-[100px] pointer-events-none" />
+            <div className="absolute -top-24 -right-24 w-96 h-96 bg-secondary/20 rounded-full blur-[100px] pointer-events-none" />
         </footer>
     )
 }

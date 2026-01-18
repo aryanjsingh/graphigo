@@ -72,7 +72,7 @@ export function GraphigoFeatures() {
 
     return (
         <section className="py-20 px-4 bg-background">
-            <div className="max-w-6xl mx-auto border border-neutral-800 rounded-3xl p-12">
+            <div className="max-w-6xl mx-auto border border-white/10 bg-neutral-900/10 backdrop-blur-3xl rounded-3xl p-12 shadow-2xl">
                 {/* Header */}
                 <div className="text-center mb-16">
                     <p className="text-sm text-gray-400 mb-4 tracking-wide">Features</p>
