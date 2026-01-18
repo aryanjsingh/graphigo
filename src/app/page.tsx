@@ -1,8 +1,6 @@
 "use client";
 import React from "react";
 import dynamic from "next/dynamic";
-import { BackgroundBeams } from "@/components/ui/background-beams";
-import { Ripple } from "@/components/ui/ripple";
 import { motion } from "framer-motion";
 import { Sparkles, Globe, ArrowRight } from "lucide-react";
 import { TextLoop } from "@/components/core/text-loop";
@@ -218,7 +216,9 @@ export default function Home() {
         <div className="absolute bottom-4 left-0 right-0 z-20">
           <LogoStrip />
         </div>
-        <Ripple />
+        {/* Background */}
+        <div className="absolute bottom-0 left-0 right-0 top-0 bg-[linear-gradient(to_right,#2222222e_1px,transparent_1px),linear-gradient(to_bottom,#2222222e_1px,transparent_1px)] bg-[size:16px_16px] [mask-image:radial-gradient(ellipse_55%_75%_at_50%_50%,#000_45%,transparent_55%)]"></div>
+        <div className="absolute bottom-0 left-0 right-0 top-0 bg-[radial-gradient(55%_50%_at_50%_100%,rgba(4,209,205,0.58)_10%,rgba(255,255,255,0)_100%)]"></div>
       </div>
 
 
