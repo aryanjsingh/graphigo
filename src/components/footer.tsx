@@ -1,6 +1,4 @@
 import Link from "next/link"
-import { Button } from "@/components/ui/button"
-import { Input } from "@/components/ui/input"
 
 export function Footer() {
     return (
@@ -10,28 +8,13 @@ export function Footer() {
                     {/* Left Column: Brand & Newsletter */}
                     <div className="flex flex-col gap-8">
                         <div>
-                            <Link href="/" className="flex items-center gap-2 mb-4">
-                                <img src="/logo.png" alt="Graphigo" className="h-10 w-auto" />
-                                <span className="font-bold text-2xl text-white tracking-tight">Graphigo</span>
+                            <Link href="/" className="inline-block mb-4">
+                                <img src="/logo.png" alt="Graphigo" className="h-32 w-auto" />
                             </Link>
                             <p className="text-muted-foreground text-lg leading-relaxed max-w-md">
                                 Strategic post-production that helps brands dominate digital spaces.
                                 Built for positioning, distribution, and scalability.
                             </p>
-                        </div>
-
-                        <div className="flex flex-col gap-4">
-                            <h3 className="text-white font-semibold text-lg">Stay updated</h3>
-                            <div className="flex gap-2 max-w-md">
-                                <Input
-                                    type="email"
-                                    placeholder="Enter your email"
-                                    className="bg-white/5 border-white/10 text-white placeholder:text-neutral-500 focus-visible:ring-primary/50"
-                                />
-                                <Button className="bg-primary text-white hover:bg-primary/90">
-                                    Subscribe
-                                </Button>
-                            </div>
                         </div>
                     </div>
 
@@ -44,7 +27,6 @@ export function Footer() {
                                 <li><Link href="/" className="text-muted-foreground hover:text-primary transition-colors">Home</Link></li>
                                 <li><Link href="/works" className="text-muted-foreground hover:text-primary transition-colors">Work</Link></li>
                                 <li><Link href="/about" className="text-muted-foreground hover:text-primary transition-colors">About</Link></li>
-                                <li><Link href="/services" className="text-muted-foreground hover:text-primary transition-colors">Services</Link></li>
                                 <li><Link href="/career" className="text-muted-foreground hover:text-primary transition-colors">Career</Link></li>
                             </ul>
                         </div>
