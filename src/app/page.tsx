@@ -143,14 +143,14 @@ export default function Home() {
               transition={{ duration: 0.5, delay: 0.1 }}
               className="mb-8"
             >
-              <h1 className="text-4xl font-bold tracking-tight text-foreground sm:text-6xl lg:text-7xl">
+              <h1 className="text-4xl font-public-sans font-bold tracking-tighter text-foreground sm:text-6xl lg:text-7xl">
                 <TextLoop className="inline-block">
                   <span>Create</span>
                   <span>Shoot</span>
                   <span>Edit</span>
                 </TextLoop>{" "}
-                <strong>Content</strong> <span>&</span> <br />
-                <strong>Convert</strong> <em className="italic">Audiences</em>
+                <span className="font-public-sans font-bold">Content</span> <span>&</span> <br />
+                <span className="font-public-sans font-bold">Convert</span> <em className="font-public-sans font-bold italic text-primary">Audiences</em>
               </h1>
             </motion.div>
 
@@ -163,7 +163,7 @@ export default function Home() {
             >
               From strategy to storytelling, we help brands dominate digital spaces
               with content that performs,  <PointerHighlight
-                rectangleClassName="bg-neutral-200 dark:bg-neutral-700 border-neutral-300 dark:border-neutral-600 leading-loose"
+                rectangleClassName="bg-primary/10 border-primary/20 rounded-md backdrop-blur-sm leading-loose"
                 pointerClassName="text-primary h-3 w-3"
                 containerClassName="inline-block mr-1"
               >
@@ -218,13 +218,14 @@ export default function Home() {
         </div>
         {/* Background */}
         <div className="absolute bottom-0 left-0 right-0 top-0 bg-[linear-gradient(to_right,#2222222e_1px,transparent_1px),linear-gradient(to_bottom,#2222222e_1px,transparent_1px)] bg-[size:16px_16px] [mask-image:radial-gradient(ellipse_55%_75%_at_50%_50%,#000_45%,transparent_55%)]"></div>
-        <div className="absolute bottom-0 left-0 right-0 top-0 bg-[radial-gradient(55%_50%_at_50%_100%,rgba(4,209,205,0.58)_10%,rgba(255,255,255,0)_100%)]"></div>
+        <div className="absolute bottom-0 left-0 right-0 h-[500px] bg-[radial-gradient(55%_100%_at_50%_100%,rgba(4,209,205,0.58)_10%,rgba(255,255,255,0)_100%)]"></div>
       </div>
 
 
 
       {/* Simple Collection Section */}
-      <section className="w-full bg-background">
+      <section className="w-full bg-background relative overflow-hidden">
+        <div className="absolute top-0 left-0 right-0 h-[500px] bg-[radial-gradient(55%_100%_at_50%_0%,rgba(4,209,205,0.58)_10%,rgba(255,255,255,0)_100%)] pointer-events-none"></div>
         <SimpleCollection />
       </section>
 

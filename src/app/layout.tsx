@@ -1,9 +1,9 @@
 import type { Metadata } from "next";
-import { Geist, Geist_Mono } from "next/font/google";
+import { Geist, Geist_Mono, Public_Sans } from "next/font/google";
 import localFont from "next/font/local";
 
 import "./globals.css";
-import { SiteDock } from "@/components/site-dock";
+import { Navbar } from "@/components/navbar";
 
 const geistSans = Geist({
   variable: "--font-geist-sans",
@@ -12,6 +12,11 @@ const geistSans = Geist({
 
 const geistMono = Geist_Mono({
   variable: "--font-geist-mono",
+  subsets: ["latin"],
+});
+
+const publicSans = Public_Sans({
+  variable: "--font-public-sans",
   subsets: ["latin"],
 });
 
@@ -48,9 +53,9 @@ export default function RootLayout({
         />
       </head>
       <body
-        className={`${geistSans.variable} ${geistMono.variable} ${roadRage.variable} antialiased`}
+        className={`${geistSans.variable} ${geistMono.variable} ${roadRage.variable} ${publicSans.variable} antialiased`}
       >
-        <SiteDock />
+        <Navbar />
         {children}
       </body>
     </html>

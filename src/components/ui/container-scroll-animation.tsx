@@ -61,28 +61,19 @@ export function SimpleCollection() {
                     perspectiveOrigin: "center center",
                 }}
             >
-                {/* Glowing gradient background */}
-                <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[120%] h-[120%] pointer-events-none">
-                    <div className="w-full h-full bg-[radial-gradient(circle_at_center,_var(--tw-gradient-stops))] from-primary/40 via-primary/10 to-transparent blur-[60px]" />
-                </div>
-
-                {/* Fade overlays */}
-                <div className="absolute left-0 top-0 bottom-0 w-48 z-10 pointer-events-none bg-gradient-to-r from-background to-transparent" />
-                <div className="absolute right-0 top-0 bottom-0 w-48 z-10 pointer-events-none bg-gradient-to-l from-background to-transparent" />
-
                 {/* Tilted carousel track */}
                 <div
                     className="relative"
                     style={{
-                        transform: "rotateX(10deg) rotateY(-5deg)",
+                        transform: "rotateX(10deg)",
                         transformStyle: "preserve-3d",
                     }}
                 >
                     <div
                         className="overflow-hidden py-8"
                         style={{
-                            maskImage: "linear-gradient(to right, transparent, black 10%, black 90%, transparent)",
-                            WebkitMaskImage: "linear-gradient(to right, transparent, black 10%, black 90%, transparent)",
+                            maskImage: "linear-gradient(to right, transparent 0%, black 10%, black 90%, transparent 100%)",
+                            WebkitMaskImage: "linear-gradient(to right, transparent 0%, black 10%, black 90%, transparent 100%)",
                         }}
                     >
                         <div className="flex gap-4 animate-scroll-left">

@@ -22,29 +22,44 @@ export function LogoStrip() {
     ]
 
     return (
-        <section className="py-4 px-4 relative">
-            <div className="w-full mx-auto overflow-hidden relative">
-                {/* Fade Gradients */}
-                <div className="absolute left-0 top-0 bottom-0 w-32 bg-gradient-to-r from-background to-transparent z-10" />
-                <div className="absolute right-0 top-0 bottom-0 w-32 bg-gradient-to-l from-background to-transparent z-10" />
-
-                <div className="flex gap-16 md:gap-24 animate-marquee whitespace-nowrap items-center">
-                    {[...logos, ...logos].map((logo, i) => {
-                        const isOriginalSize = logo.includes("/1.png") || logo.includes("/3.png");
-                        return (
-                            <div key={i} className="flex-shrink-0 flex items-center justify-center h-40 w-64">
-                                {/* eslint-disable-next-line @next/next/no-img-element */}
-                                <img
-                                    src={logo}
-                                    alt={`Brand Logo ${i}`}
-                                    className={cn(
-                                        "w-auto max-w-full object-contain brightness-0 invert opacity-70 hover:opacity-100 transition-opacity duration-300",
-                                        isOriginalSize ? "max-h-24" : "max-h-40"
-                                    )}
-                                />
-                            </div>
-                        )
-                    })}
+        <section className="py-6 px-4 relative">
+            {/* 3D Perspective Container */}
+            <div
+                className="w-full mx-auto overflow-hidden relative"
+                style={{
+                    perspective: '1200px',
+                    perspectiveOrigin: 'center top'
+                }}
+            >
+                {/* Cylindrical Strip with 3D Transform */}
+                <div
+                    className="relative"
+                    style={{
+                        transformStyle: 'preserve-3d',
+                        transform: 'rotateX(8deg)',
+                        maskImage: 'linear-gradient(to right, transparent 0%, black 15%, black 85%, transparent 100%)',
+                        WebkitMaskImage: 'linear-gradient(to right, transparent 0%, black 15%, black 85%, transparent 100%)',
+                    }}
+                >
+                    {/* Logo Container with Marquee */}
+                    <div className="flex gap-16 md:gap-24 animate-marquee whitespace-nowrap items-center py-2">
+                        {[...logos, ...logos].map((logo, i) => {
+                            const isOriginalSize = logo.includes("/1.png") || logo.includes("/3.png");
+                            return (
+                                <div key={i} className="flex-shrink-0 flex items-center justify-center h-32 w-56">
+                                    {/* eslint-disable-next-line @next/next/no-img-element */}
+                                    <img
+                                        src={logo}
+                                        alt={`Brand Logo ${i}`}
+                                        className={cn(
+                                            "w-auto max-w-full object-contain brightness-0 invert opacity-60 hover:opacity-90 transition-opacity duration-300",
+                                            isOriginalSize ? "max-h-20" : "max-h-32"
+                                        )}
+                                    />
+                                </div>
+                            )
+                        })}
+                    </div>
                 </div>
             </div>
             <style jsx>{`
